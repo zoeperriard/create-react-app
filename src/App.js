@@ -237,8 +237,8 @@ function App() {
           </p>
           <p className="secondary-desc">
             Passionnée par la data analysis, l'optimisation des processus métier et la transformation digitale, 
-            je suis en dernière année de bachelor en économie d'entreprise en emploi à l'HEIG-VD avec 
-            spécialisation en digitalisation e-business ainsi que analyse et visualisation de donnée.
+            je suis en dernière année de bachelor en économie d'entreprise en emploi à l'HEIG-VD, avec
+            spécialisation en digitalisation & e-business ainsi qu’en analyse et visualisation de données.
           </p>
         </div>
 
@@ -297,7 +297,7 @@ function App() {
                 <span className="pill">Désirabilité</span>
                 <span className="pill">Faisabilité</span>
                 <span className="pill">Viabilité</span>
-                <span className="pill">Analyse de Marché</span>
+                <span className="pill">Analyse de m arché</span>
                 <span className="pill">Business Model</span>
                 <span className="pill">IA</span>
               </div>
@@ -389,7 +389,7 @@ function App() {
               <span className="pill"><BarChart size={16} /> Tableaux de bord</span>
               <span className="pill"><TrendingUp size={16} /> Reporting & KPIs</span>
               <span className="pill"><TrendingUp size={16} /> Aide à la décision</span>
-              <span className="pill"><Search size={16} /> Google Analytics (certifié)</span>
+              <span className="pill"><Search size={16} /> Google Analytics (certifiée)</span>
             </div>
           </div>
 
