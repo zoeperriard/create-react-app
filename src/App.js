@@ -262,43 +262,44 @@ function App() {
       <section id="projets">
         <h2><Target size={32} /> Projets</h2>
         
-        {/* Projet Principal - Travail de Bachelor */}
+        {/* Travail de Bachelor */}
         <div className="card project-featured" style={{marginBottom: '30px'}}>
           <div className="card-header">
             <div className="icon-wrapper"><GraduationCap size={24} /></div>
             <div>
-              <span className="badge-featured">Projet Principal</span>
-              <h3>Travail de Bachelor : IA & Planification de voyage</h3>
+              <h3>Travail de Bachelor : Planification de voyage & IA</h3>
             </div>
           </div>
           
           <div className="project-content-grid">
             <div className="project-info">
-              <p className="project-tagline">Étude d’opportunité et de faisabilité économique pour une application automatisée par IA.</p>
+              <p className="project-tagline">Étude d’opportunité et de faisabilité économique d’une application de planification de voyage assistée par l’IA.</p>
               
               <div className="project-section">
                 <h4><Search size={16} /> Contexte & Problématique</h4>
-                <p>Analyse du marché des voyageurs seniors autonomes. La planification de voyages complexes génère des coûts cognitifs élevés; les solutions actuelles sont inadaptées à ce segment.</p>
+                <p>Analyse de l’opportunité, de la désirabilité et de la viabilité économique d’une application de planification de voyage partiellement automatisée, destinée aux voyageurs seniors autonomes.</p>
               </div>
 
               <div className="project-section">
                 <h4><Zap size={16} /> Approche & Réalisation</h4>
                 <ul className="experience-list">
-                  <li>Analyse du marché, de la cible et définition du problème économique</li>
-                  <li>Étude d'opportunité et de faisabilité économique</li>
-                  <li>Conception du concept de solution et des fonctionnalités clés</li>
-                  <li>Définition du modèle économique et vision produit</li>
+                  <li>Analyse du problème et du segment cible</li>
+                  <li>Désirabilité · Faisabilité · Viabilité</li>
+                  <li>Analyse de marché (TAM · SAM · SOM)</li>
+                  <li>Proposition de valeur & modèle d’affaires</li>
+                  <li>Conception d’un Proof of Concept (POC) et vision produit</li>
                 </ul>
               </div>
             </div>
             
             <div className="project-tech">
               <div className="pills-container">
+                <span className="pill">Désirabilité</span>
+                <span className="pill">Faisabilité</span>
+                <span className="pill">Viabilité</span>
                 <span className="pill">Analyse de Marché</span>
-                <span className="pill">IA</span>
                 <span className="pill">Business Model</span>
-                <span className="pill">Product Vision</span>
-                <span className="pill">Économie d'entreprise</span>
+                <span className="pill">IA</span>
               </div>
             </div>
           </div>
@@ -313,43 +314,46 @@ function App() {
             </div>
             <div className="project-section">
               <p className="text-muted" style={{marginBottom: '15px'}}>
-                Transformation de données RH brutes en indicateurs décisionnels pour identifier les tendances d'attrition et de répartition des effectifs.
+                Analyse de données et data visualisation sous Tableau pour comprendre les départs des collaborateurs (attrition) à partir de données RH.
               </p>
               <ul className="experience-list" style={{fontSize: '0.9rem', marginBottom: '20px'}}>
-                <li>Nettoyage et structuration de bases SIRH</li>
-                <li>Définition de KPIs RH (attrition, ancienneté)</li>
+                <li>Nettoyage et structuration des données</li>
+                <li>Modélisation et transformation des données</li>
+                <li>Création de champs calculés et indicateurs</li>
+                <li>Analyse exploratoire et KPIs d’attrition</li>
                 <li>Dashboards interactifs sur Tableau</li>
               </ul>
             </div>
             <div className="pills-container">
               <span className="pill">Tableau</span>
-              <span className="pill">Data Viz</span>
-              <span className="pill">RH</span>
-              <span className="pill">Nettoyage de données</span>
+              <span className="pill">Analyse exploratoire</span>
+              <span className="pill">Corrélation</span>
             </div>
           </div>
 
-          {/* Projet 3 - Swissquote */}
+          {/* Projet 3 - Rapport pratique pro */}
           <div className="card">
             <div className="card-header">
               <div className="icon-wrapper"><Zap size={24} /></div>
-              <h3>Optimisation Administrative</h3>
+              <h3>Analyse et optimisation de processus opérationnel</h3>
             </div>
             <div className="project-section">
               <p className="text-muted" style={{marginBottom: '15px'}}>
-                Automatisation des processus Legal Operations chez Swissquote Bank pour réduire les risques opérationnels et les délais de traitement.
+                Projet d’analyse de données et de processus réalisé dans un environnement réglementé, visant à améliorer le suivi administratif et la performance opérationnelle.
               </p>
               <ul className="experience-list" style={{fontSize: '0.9rem', marginBottom: '20px'}}>
-                <li>Analyse des flux administratifs existants</li>
-                <li>Automatisation via outils bureautiques avancés</li>
-                <li>Sécurisation du suivi des demandes autorités</li>
+                <li>Cartographie du processus BPMN</li>
+                <li>Analyse des données de suivi</li>
+                <li>Analyse des KPIs (délais, charge, volumes)</li>
+                <li>Structuration et fiabilisation des données</li>
+                <li>Recommandations data-driven</li>
               </ul>
             </div>
             <div className="pills-container">
-              <span className="pill">VBA</span>
               <span className="pill">Excel</span>
-              <span className="pill">Optimisation</span>
-              <span className="pill">Legal Ops</span>
+              <span className="pill">BPMN</span>
+              <span className="pill">Analyse de données</span>
+              <span className="pill">KPIs</span>
             </div>
           </div>
         </div>
@@ -367,11 +371,12 @@ function App() {
             <div className="pills-container">
               <span className="pill"><Database size={16} /> SQL</span>
               <span className="pill"><Zap size={16} /> Python</span>
-              <span className="pill"><BarChart size={16} /> Statistiques (corrélation, probabilités)</span>
-              <span className="pill"><Layers size={16} /> Excel avancé (VBA, Power Query, TCD)</span>
-              <span className="pill"><Search size={16} /> Préparation et nettoyage de données</span>
+              <span className="pill"><BarChart size={16} /> Excel avancé (VBA, Power Query, TCD)</span>
+              <span className="pill"><Layers size={16} /> Analyse exploratoire (EDA)</span>
+              <span className="pill"><Search size={16} /> Analyse statistique</span>
+              <span className="pill"><Search size={16} /> Préparation et nettoyage des données</span>
             </div>
-          </div>
+            </div>
 
           <div className="card">
             <div className="card-header">
@@ -380,10 +385,11 @@ function App() {
             </div>
             <div className="pills-container">
               <span className="pill"><Layers size={16} /> Tableau</span>
-              <span className="pill"><Search size={16} /> Google Analytics (certifié)</span>
-              <span className="pill"><BarChart size={16} /> Data visualisation</span>
+              <span className="pill"><Layers size={16} /> Data visualisation</span>
+              <span className="pill"><BarChart size={16} /> Tableaux de bord</span>
               <span className="pill"><TrendingUp size={16} /> Reporting & KPIs</span>
-              <span className="pill"><Zap size={16} /> Analyse exploratoire</span>
+              <span className="pill"><TrendingUp size={16} /> Aide à la décision</span>
+              <span className="pill"><Search size={16} /> Google Analytics (certifié)</span>
             </div>
           </div>
 
@@ -395,9 +401,9 @@ function App() {
             <div className="pills-container">
               <span className="pill"><Database size={16} /> SAP FI/CO</span>
               <span className="pill"><Layers size={16} /> Odoo</span>
-              <span className="pill"><TrendingUp size={16} /> BPMN (HEFLO)</span>
-              <span className="pill"><Zap size={16} /> Automatisation de processus</span>
-              <span className="pill"><Database size={16} /> Gestion de bases de données</span>
+              <span className="pill"><TrendingUp size={16} /> BPMN</span>
+              <span className="pill"><Zap size={16} /> Automatisation des processus</span>
+              <span className="pill"><Database size={16} /> Gestion et structuration des données</span>
             </div>
           </div>
 
@@ -407,11 +413,11 @@ function App() {
               <h3>Stratégie et performance</h3>
             </div>
             <div className="pills-container">
-              <span className="pill"><Lightbulb size={16} /> Transformation digitale</span>
+              <span className="pill"><BarChart size={16} /> Analyse de performance</span>
               <span className="pill"><Zap size={16} /> Optimisation des processus</span>
               <span className="pill"><TrendingUp size={16} /> Suivi budgétaire</span>
-              <span className="pill"><BarChart size={16} /> Analyse de performance</span>
-              <span className="pill"><Globe size={16} /> E-business</span>
+              <span className="pill"><Lightbulb size={16} /> Transformation digitale</span>
+              <span className="pill"><Globe size={16} /> e-business</span>
             </div>
           </div>
         </div>
@@ -430,6 +436,42 @@ function App() {
         </div>
       </section>
 
+      {/* Langues */}
+      <section>
+        <h2><Globe size={32} /> Langues</h2>
+        <div className="card">
+          <div className="languages-container">
+            <div className="language-item">
+              <div className="language-info">
+                <span className="language-name">Français</span>
+                <span className="language-level">Langue maternelle</span>
+              </div>
+              <div className="progress-bar">
+                <div className="progress-fill" style={{ width: '100%' }}></div>
+              </div>
+            </div>
+            <div className="language-item">
+              <div className="language-info">
+                <span className="language-name">Anglais</span>
+                <span className="language-level">B2</span>
+              </div>
+              <div className="progress-bar">
+                <div className="progress-fill" style={{ width: '75%' }}></div>
+              </div>
+            </div>
+            <div className="language-item">
+              <div className="language-info">
+                <span className="language-name">Allemand</span>
+                <span className="language-level">B1</span>
+              </div>
+              <div className="progress-bar">
+                <div className="progress-fill" style={{ width: '60%' }}></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Expériences */}
       <section id="experience">
         <h2><Briefcase size={32} /> Expériences professionnelles</h2>
@@ -438,7 +480,7 @@ function App() {
           <div className="card experience-card">
             <div className="date-badge-experience"><Calendar size={14} /> août 2023 – octobre 2025</div>
             <h3 className="job-title">Legal Operations Officer</h3>
-            <p className="company-name">Swissquote Bank SA (temps partiel)</p>
+            <p className="company-name">Swissquote Bank SA</p>
             <ul className="experience-list">
               <li>Mise à jour régulière des bases données et réalisation de statistiques mensuelles</li>
               <li>Préparation, nettoyage et analyse exploratoire de données</li>
@@ -453,7 +495,7 @@ function App() {
           <div className="card experience-card" style={{marginTop: '40px'}}>
             <div className="date-badge-experience"><Calendar size={14} /> juillet 2022 – juillet 2023</div>
             <h3 className="job-title">Assistante en gestion comptable</h3>
-            <p className="company-name">Ministère public central (50%)</p>
+            <p className="company-name">Ministère public central</p>
             <ul className="experience-list">
               <li>Etablir les paiements créanciers et gérer les liquidités</li>
               <li>Collaborer à l’établissement du suivi budgétaire et des statistiques internes</li>
@@ -506,42 +548,6 @@ function App() {
               <div className="date-badge"><Calendar size={14} /> 2017 – 2021</div>
               <h3>CFC d’employée de commerce, administration publique</h3>
               <p className="school-name">EPCL, Lausanne</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Langues */}
-      <section>
-        <h2><Globe size={32} /> Langues</h2>
-        <div className="card">
-          <div className="languages-container">
-            <div className="language-item">
-              <div className="language-info">
-                <span className="language-name">Français</span>
-                <span className="language-level">Langue maternelle</span>
-              </div>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '100%' }}></div>
-              </div>
-            </div>
-            <div className="language-item">
-              <div className="language-info">
-                <span className="language-name">Anglais</span>
-                <span className="language-level">B2</span>
-              </div>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '75%' }}></div>
-              </div>
-            </div>
-            <div className="language-item">
-              <div className="language-info">
-                <span className="language-name">Allemand</span>
-                <span className="language-level">B1</span>
-              </div>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '60%' }}></div>
-              </div>
             </div>
           </div>
         </div>
