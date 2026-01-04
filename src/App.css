@@ -61,7 +61,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 1002; /* Augmenté pour être au-dessus du menu mobile si nécessaire */
   background: rgba(11, 17, 24, 0.8);
   backdrop-filter: blur(10px);
 }
@@ -458,6 +458,15 @@ h3 {
   margin-top: 40px;
 }
 
+@media (max-width: 768px) {
+  .experience-timeline {
+    padding-left: 30px;
+  }
+  .experience-timeline::before {
+    left: 10px;
+  }
+}
+
 .experience-timeline::before {
   content: "";
   position: absolute;
@@ -486,6 +495,15 @@ h3 {
   border-radius: 50%;
   z-index: 2;
   box-shadow: 0 0 10px var(--primary);
+}
+
+@media (max-width: 768px) {
+  .experience-card::before {
+    left: -25px;
+    width: 15px;
+    height: 15px;
+    top: 35px;
+  }
 }
 
 .date-badge-experience {
@@ -578,16 +596,72 @@ footer {
 }
 
 /* Responsive */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
 @media (max-width: 1024px) {
   .hero h1 { font-size: 4rem; }
   .grid { grid-template-columns: 1fr; }
-  .navbar { padding: 20px; }
-  .nav-links { display: none; }
+  .navbar { padding: 15px 25px; }
+  
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%; /* Largeur totale sur mobile */
+    height: 100vh;
+    background: rgba(11, 17, 24, 0.98);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
   .hero h1 { font-size: 3rem; }
   section { padding: 60px 20px; }
   .hero { align-items: center; text-align: center; }
-  .hero-buttons { justify-content: center; }
+  .hero-buttons { 
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  .btn { width: 100%; justify-content: center; }
+  .grid-contact {
+    grid-template-columns: 1fr;
+  }
+  .nav-brand span { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.5rem; }
+  .hero-subtitle { font-size: 1.1rem; }
+  .hero .main-desc { font-size: 1.2rem; }
+  h2 { font-size: 1.8rem; }
+  .card { padding: 25px; }
+  .nav-brand span { display: none; }
 }

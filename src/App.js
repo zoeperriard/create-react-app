@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import { 
   Download, 
@@ -29,7 +29,9 @@ import {
   Camera, 
   Heart, 
   Car,
-  Target
+  Target,
+  Menu,
+  X
 } from 'lucide-react';
 
 const BackgroundNetwork = () => {
@@ -202,19 +204,28 @@ const BackgroundNetwork = () => {
 };
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <nav className="navbar">
       <div className="nav-brand">
         <Layers size={24} color="#58c4dc" />
         <span>Mon Portfolio</span>
       </div>
-      <div className="nav-links">
-        <a href="#profil" className="nav-link"><User size={18} /> Profil</a>
-        <a href="#projets" className="nav-link"><Target size={18} /> Projets</a>
-        <a href="#competences" className="nav-link"><BarChart size={18} /> Compétences</a>
-        <a href="#experience" className="nav-link"><Briefcase size={18} /> Expérience</a>
-        <a href="#formation" className="nav-link"><GraduationCap size={18} /> Formation</a>
-        <a href="#contact" className="nav-link"><Mail size={18} /> Contact</a>
+
+      <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+        {isOpen ? <X size={28} /> : <Menu size={28} />}
+      </button>
+
+      <div className={`nav-links ${isOpen ? 'active' : ''}`}>
+        <a href="#profil" className="nav-link" onClick={() => setIsOpen(false)}><User size={18} /> Profil</a>
+        <a href="#projets" className="nav-link" onClick={() => setIsOpen(false)}><Target size={18} /> Projets</a>
+        <a href="#competences" className="nav-link" onClick={() => setIsOpen(false)}><BarChart size={18} /> Compétences</a>
+        <a href="#experience" className="nav-link" onClick={() => setIsOpen(false)}><Briefcase size={18} /> Expérience</a>
+        <a href="#formation" className="nav-link" onClick={() => setIsOpen(false)}><GraduationCap size={18} /> Formation</a>
+        <a href="#contact" className="nav-link" onClick={() => setIsOpen(false)}><Mail size={18} /> Contact</a>
       </div>
     </nav>
   );
@@ -243,7 +254,7 @@ function App() {
         </div>
 
         <div className="hero-buttons">
-          <a href="#" className="btn btn-primary">
+          <a href="https://drive.google.com/uc?export=download&id=1BWF38QW0hslTXcwICHgx2ZfxT-fT_V9R" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
             <Download size={20} /> Télécharger CV
           </a>
           <a href="https://www.linkedin.com/in/zoe-perriard/" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
