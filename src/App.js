@@ -31,7 +31,8 @@ import {
   Car,
   Target,
   Menu,
-  X
+  X,
+  ChevronDown
 } from 'lucide-react';
 
 const BackgroundNetwork = () => {
@@ -210,22 +211,24 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="nav-brand">
-        <Layers size={24} color="#58c4dc" />
-        <span>Mon Portfolio</span>
-      </div>
+      <div className="nav-container">
+        <div className="nav-brand">
+          <Layers size={24} color="#58c4dc" />
+          <span>Mon Portfolio</span>
+        </div>
 
-      <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-        {isOpen ? <X size={28} /> : <Menu size={28} />}
-      </button>
+        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
 
-      <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-        <a href="#profil" className="nav-link" onClick={() => setIsOpen(false)}><User size={18} /> Profil</a>
-        <a href="#projets" className="nav-link" onClick={() => setIsOpen(false)}><Target size={18} /> Projets</a>
-        <a href="#competences" className="nav-link" onClick={() => setIsOpen(false)}><BarChart size={18} /> Compétences</a>
-        <a href="#experience" className="nav-link" onClick={() => setIsOpen(false)}><Briefcase size={18} /> Expérience</a>
-        <a href="#formation" className="nav-link" onClick={() => setIsOpen(false)}><GraduationCap size={18} /> Formation</a>
-        <a href="#contact" className="nav-link" onClick={() => setIsOpen(false)}><Mail size={18} /> Contact</a>
+        <div className={`nav-links ${isOpen ? 'active' : ''}`}>
+          <a href="#profil" className="nav-link" onClick={() => setIsOpen(false)}><User size={18} /> Profil</a>
+          <a href="#projets" className="nav-link" onClick={() => setIsOpen(false)}><Target size={18} /> Projets</a>
+          <a href="#competences" className="nav-link" onClick={() => setIsOpen(false)}><BarChart size={18} /> Compétences</a>
+          <a href="#experience" className="nav-link" onClick={() => setIsOpen(false)}><Briefcase size={18} /> Expérience</a>
+          <a href="#formation" className="nav-link" onClick={() => setIsOpen(false)}><GraduationCap size={18} /> Formation</a>
+          <a href="#contact" className="nav-link" onClick={() => setIsOpen(false)}><Mail size={18} /> Contact</a>
+        </div>
       </div>
     </nav>
   );
@@ -254,7 +257,7 @@ function App() {
         </div>
 
         <div className="hero-buttons">
-          <a href="https://drive.google.com/uc?export=download&id=1BWF38QW0hslTXcwICHgx2ZfxT-fT_V9R" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/file/d/1BWF38QW0hslTXcwICHgx2ZfxT-fT_V9R/view?usp=drive_link" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
             <Download size={20} /> Télécharger CV
           </a>
           <a href="https://www.linkedin.com/in/zoe-perriard/" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
@@ -267,6 +270,10 @@ function App() {
             <Mail size={20} /> Contact
           </a>
         </div>
+
+        <a href="#projets" className="scroll-indicator">
+          <ChevronDown size={32} />
+        </a>
       </section>
 
       {/* Projets Section */}
@@ -492,10 +499,16 @@ function App() {
             <div className="date-badge-experience"><Calendar size={14} /> août 2023 – octobre 2025</div>
             <h3 className="job-title">Legal Operations Officer</h3>
             <p className="company-name">Swissquote Bank SA</p>
+            
+            <h4 className="experience-subtitle">Data & automatisation</h4>
             <ul className="experience-list">
               <li>Mise à jour régulière des bases données et réalisation de statistiques mensuelles</li>
               <li>Préparation, nettoyage et analyse exploratoire de données</li>
               <li>Automatisation de processus via Excel VBA</li>
+            </ul>
+
+            <h4 className="experience-subtitle">Opérations & coordination</h4>
+            <ul className="experience-list">
               <li>Gérer le courrier entrant quotidien en français, allemand, anglais et italien</li>
               <li>Traitement et suivi de la correspondance avec les autorités</li>
               <li>Coordination des procédures de blocage de comptes</li>
@@ -581,10 +594,10 @@ function App() {
                 <Camera size={20} color="#58c4dc" /> <span>Suissesse, 23 ans</span>
               </div>
               <div style={{display: 'flex', alignItems: 'center', gap: '12px'}}>
-                <Car size={20} color="#58c4dc" /> <span>Permis de conduire catégorie B</span>
+                <Car size={20} color="#58c4dc" /> <span>Permis de conduire : catégorie B</span>
               </div>
               <div style={{display: 'flex', alignItems: 'center', gap: '12px'}}>
-                <Heart size={20} color="#58c4dc" /> <span>Centres d'intérêt : Snowboard, Kitesurf, Fitness</span>
+                <Heart size={20} color="#58c4dc" /> <span>Intérêt : Snowboard, Kitesurf, Fitness</span>
               </div>
             </div>
           </div>
