@@ -35,6 +35,345 @@ import {
   ChevronDown
 } from 'lucide-react';
 
+const translations = {
+  fr: {
+    nav: {
+      brand: "Mon Portfolio",
+      profil: "Profil",
+      projets: "Projets",
+      competences: "Compétences",
+      experience: "Expérience",
+      formation: "Formation",
+      contact: "Contact"
+    },
+    hero: {
+      greeting: "Bonjour, je suis",
+      name: "Zoé",
+      surname: "Perriard",
+      jobTitle: "Data Analyst, passionnée par les nouvelles technologies, l'innovation et la transformation digitale",
+      description: "Passionnée par la data analysis, l'optimisation des processus métier et la transformation digitale, je suis en dernière année de bachelor en économie d'entreprise en emploi à l'HEIG-VD, avec spécialisation en digitalisation & e-business ainsi qu’en analyse et visualisation de données.",
+      downloadCv: "Télécharger CV",
+      cvLink: "https://drive.google.com/file/d/1BWF38QW0hslTXcwICHgx2ZfxT-fT_V9R/view?usp=drive_link",
+      contact: "Contact"
+    },
+    projects: {
+      title: "Projets",
+      bachelor: {
+        title: "Travail de Bachelor : Planification de voyage & IA",
+        tagline: "Étude d’opportunité et de faisabilité économique d’une application de planification de voyage assistée par l’IA.",
+        contextTitle: "Contexte & Problématique",
+        context: "Analyse de l’opportunité, de la désirabilité et de la viabilité économique d’une application de planification de voyage partiellement automatisée, destinée aux voyageurs seniors autonomes.",
+        approachTitle: "Approche & Réalisation",
+        approach: [
+          "Analyse du problème et du segment cible",
+          "Désirabilité · Faisabilité · Viabilité",
+          "Analyse de marché (TAM · SAM · SOM)",
+          "Proposition de valeur & modèle d’affaires",
+          "Conception d’un Proof of Concept (POC) et vision produit"
+        ],
+        pills: ["Désirabilité", "Faisabilité", "Viabilité", "Analyse de marché", "Business Model", "IA"]
+      },
+      sirh: {
+        title: "Analyse de données SIRH",
+        description: "Analyse de données et data visualisation sous Tableau pour comprendre les départs des collaborateurs (attrition) à partir de données RH.",
+        tasks: [
+          "Nettoyage et structuration des données",
+          "Modélisation et transformation des données",
+          "Création de champs calculés et indicateurs",
+          "Analyse exploratoire et KPIs d’attrition",
+          "Dashboards interactifs sur Tableau"
+        ],
+        pills: ["Tableau", "Analyse exploratoire", "Corrélation"]
+      },
+      process: {
+        title: "Analyse et optimisation de processus opérationnel",
+        description: "Projet d’analyse de données et de processus réalisé dans un environnement réglementé, visant à améliorer le suivi administratif et la performance opérationnelle.",
+        tasks: [
+          "Cartographie du processus BPMN",
+          "Analyse des données de suivi",
+          "Analyse des KPIs (délais, charge, volumes)",
+          "Structuration et fiabilisation des données",
+          "Recommandations data-driven"
+        ],
+        pills: ["Excel", "BPMN", "Analyse de données", "KPIs"]
+      }
+    },
+    skills: {
+      technical: "Compétences techniques",
+      personal: "Compétences personnelles",
+      modeling: {
+        title: "Analyse et modélisation",
+        pills: ["SQL", "Python", "Excel avancé (VBA, Power Query, TCD)", "Analyse exploratoire (EDA)", "Analyse statistique", "Préparation et nettoyage des données"]
+      },
+      bi: {
+        title: "Business Intelligence",
+        pills: ["Tableau", "Data visualisation", "Tableaux de bord", "Reporting & KPIs", "Aide à la décision", "Google Analytics (certifiée)"]
+      },
+      si: {
+        title: "Systèmes d'Information",
+        pills: ["SAP FI/CO", "Odoo", "CRM", "BPMN", "Automatisation des processus", "Gestion et structuration des données"]
+      },
+      strategy: {
+        title: "Stratégie et performance",
+        pills: ["Analyse SWOT & PESTEL", "Analyse de performance", "Optimisation des processus", "Suivi budgétaire", "Transformation digitale", "e-business"]
+      },
+      soft: [
+        "Approche data-driven et esprit analytique",
+        "Gestion des priorités",
+        "Esprit autodidacte",
+        "Travail d’équipe",
+        "Proactive et persévérante",
+        "Sens de l’écoute et de la communication"
+      ]
+    },
+    languages: {
+      title: "Langues",
+      fr: { name: "Français", level: "Langue maternelle" },
+      en: { name: "Anglais", level: "B2" },
+      de: { name: "Allemand", level: "B1" }
+    },
+    experience: {
+      title: "Expériences professionnelles",
+      sq: {
+        title: "Legal Operations Officer",
+        company: "Swissquote Bank SA",
+        subtitle1: "Data & automatisation",
+        list1: [
+          "Mise à jour régulière des bases données et réalisation de statistiques mensuelles",
+          "Préparation, nettoyage et analyse exploratoire de données",
+          "Automatisation de processus via Excel (macro VBA, tableau croisé dynamique, Power Query)"
+        ],
+        subtitle2: "Opérations & coordination",
+        list2: [
+          "Gérer le courrier entrant quotidien en français, allemand, anglais et italien",
+          "Traitement et suivi de la correspondance avec les autorités",
+          "Coordination des procédures de blocage de comptes",
+          "Gestion des délais de réponse aux autorités et notifications aux clients"
+        ]
+      },
+      mp: {
+        title: "Assistante en gestion comptable",
+        company: "Ministère public central",
+        list: [
+          "Etablir les paiements créanciers et gérer les liquidités",
+          "Collaborer à l’établissement du suivi budgétaire et des statistiques internes",
+          "Gestion et transferts de biens séquestrés en lien avec les forces de l’ordre"
+        ]
+      },
+      app: {
+        title: "Apprentissage d'employée de commerce",
+        company: "Commune de Crissier",
+        list: [
+          "2020 – 2021 Service des Infrastructures",
+          "2019 – 2020 Contrôle des habitants",
+          "2018 – 2019 Services des finances",
+          "2017 – 2018 Administration & Ressources humaines"
+        ]
+      }
+    },
+    formation: {
+      title: "Formation",
+      bachelor: {
+        title: "Bachelor of Science HES-SO, économie d'entreprise",
+        school: "HEIG-VD, Yverdon",
+        option: "Digitalisation & E-Business et Analyse & visualisation de données"
+      },
+      maturite: {
+        title: "Maturité post-CFC, économie et services",
+        school: "EPCL, Lausanne"
+      },
+      cfc: {
+        title: "CFC d’employée de commerce, administration publique",
+        school: "EPCL, Lausanne"
+      }
+    },
+    contact: {
+      title: "Restons en contact",
+      subtitle: "Intéressé par mon profil ? N'hésitez pas à me contacter pour discuter d'opportunités.",
+      about: {
+        title: "À propos de moi",
+        age: "Suissesse, 23 ans",
+        driving: "Permis de conduire : catégorie B",
+        interests: "Intérêt : Snowboard, Kitesurf, Fitness"
+      },
+      info: {
+        location: "Lausanne, Suisse",
+        email: "zoe.perriard@gmail.com",
+        social: "Réseaux sociaux"
+      },
+      footer: "© Zoé Perriard · Data & Business Analytics"
+    }
+  },
+  en: {
+    nav: {
+      brand: "My Portfolio",
+      profil: "Profile",
+      projets: "Projects",
+      competences: "Skills",
+      experience: "Experience",
+      formation: "Education",
+      contact: "Contact"
+    },
+    hero: {
+      greeting: "Hi, I am",
+      name: "Zoé",
+      surname: "Perriard",
+      jobTitle: "Data Analyst, passionate about new technologies, innovation, and digital transformation",
+      description: "Passionate about data analysis, business process optimization, and digital transformation, I am in my final year of a Bachelor's degree in Business Administration while working at HEIG-VD, specializing in digitalization & e-business as well as data analysis and visualization.",
+      downloadCv: "Download CV",
+      cvLink: "https://drive.google.com/file/d/1WA989e5CMMenyba5MDZ7Jf7p0u-MatFk/view?usp=drive_link",
+      contact: "Contact"
+    },
+    projects: {
+      title: "Projects",
+      bachelor: {
+        title: "Bachelor Thesis: Travel Planning & AI",
+        tagline: "Economic opportunity and feasibility study for an AI-assisted travel planning application.",
+        contextTitle: "Context & Problem",
+        context: "Analysis of the opportunity, desirability, and economic viability of a partially automated travel planning application intended for autonomous senior travelers.",
+        approachTitle: "Approach & Realization",
+        approach: [
+          "Problem and target segment analysis",
+          "Desirability · Feasibility · Viability",
+          "Market analysis (TAM · SAM · SOM)",
+          "Value proposition & business model",
+          "Proof of Concept (POC) design and product vision"
+        ],
+        pills: ["Desirability", "Feasibility", "Viability", "Market Analysis", "Business Model", "AI"]
+      },
+      sirh: {
+        title: "HRIS Data Analysis",
+        description: "Data analysis and visualization in Tableau to understand employee turnover (attrition) from HR data.",
+        tasks: [
+          "Data cleaning and structuring",
+          "Data modeling and transformation",
+          "Creation of calculated fields and indicators",
+          "Exploratory analysis and attrition KPIs",
+          "Interactive dashboards on Tableau"
+        ],
+        pills: ["Tableau", "Exploratory Analysis", "Correlation"]
+      },
+      process: {
+        title: "Operational Process Analysis and Optimization",
+        description: "Data and process analysis project carried out in a regulated environment, aiming to improve administrative monitoring and operational performance.",
+        tasks: [
+          "BPMN process mapping",
+          "Monitoring data analysis",
+          "KPI analysis (delays, load, volumes)",
+          "Data structuring and reliability",
+          "Data-driven recommendations"
+        ],
+        pills: ["Excel", "BPMN", "Data Analysis", "KPIs"]
+      }
+    },
+    skills: {
+      technical: "Technical Skills",
+      personal: "Personal Skills",
+      modeling: {
+        title: "Analysis and Modeling",
+        pills: ["SQL", "Python", "Advanced Excel (VBA, Power Query, TCD)", "Exploratory Analysis (EDA)", "Statistical Analysis", "Data Cleaning and Preparation"]
+      },
+      bi: {
+        title: "Business Intelligence",
+        pills: ["Tableau", "Data Visualization", "Dashboards", "Reporting & KPIs", "Decision Support", "Google Analytics (certified)"]
+      },
+      si: {
+        title: "Information Systems",
+        pills: ["SAP FI/CO", "Odoo", "CRM", "BPMN", "Process Automation", "Data Management and Structuring"]
+      },
+      strategy: {
+        title: "Strategy and Performance",
+        pills: ["SWOT & PESTEL Analysis", "Performance Analysis", "Process Optimization", "Budgetary Monitoring", "Digital Transformation", "e-business"]
+      },
+      soft: [
+        "Data-driven approach and analytical mindset",
+        "Priority management",
+        "Self-taught spirit",
+        "Teamwork",
+        "Proactive and persevering",
+        "Listening and communication skills"
+      ]
+    },
+    languages: {
+      title: "Languages",
+      fr: { name: "French", level: "Native language" },
+      en: { name: "English", level: "B2" },
+      de: { name: "German", level: "B1" }
+    },
+    experience: {
+      title: "Professional Experience",
+      sq: {
+        title: "Legal Operations Officer",
+        company: "Swissquote Bank SA",
+        subtitle1: "What I worked on",
+        list1: [
+          "Maintain and update operational databases, producing monthly statistical reports for internal monitoring",
+          "Prepare, clean, and analyze data through exploratory data analysis"
+        ],
+        subtitle2: "Automation & tools",
+        list2: [
+          "Automate reporting and administrative processes using Excel (VBA macros, Pivot Tables, Power Query), improving data reliability"
+        ],
+        subtitle3: "Context",
+        list3: [
+            "Manage multilingual correspondence (FR / DE / EN / IT) and official communications with authorities in a regulated environment"
+        ]
+      },
+      mp: {
+        title: "Accounting Management Assistant",
+        list: [
+          "Execute creditor payments and manage liquidity",
+          "Collaborate on budgetary monitoring and internal statistics",
+          "Management and transfer of seized assets in connection with law enforcement"
+        ],
+        company: "Canton of Vaud, Public Prosecutor’s Office"
+      },
+      app: {
+        title: "Apprenticeship as a Commercial Employee",
+        company: "Municipality of Crissier",
+        list: [
+          "2020 – 2021 Infrastructure Department",
+          "2019 – 2020  Residents' Control",
+          "2018 – 2019  Finance Department",
+          "2017 – 2018  Administration & Human Resources"
+        ]
+      }
+    },
+    formation: {
+      title: "Education",
+      bachelor: {
+        title: "Bachelor of Science HES-SO in Business Administration",
+        option: "Digitalization & E-Business and Business Data Analysis & Visualization",
+        schoolname: "HEIG-VD, Yverdon, Switzerland"
+      },
+      maturite: {
+        title: "Post-CFC Maturity, Economy and Services",
+        schoolname: "EPCL, Lausanne, Switzerland"
+      },
+      cfc: {
+        title: "Federal VET Diploma (CFC), Commercial Employee",
+        schoolname: "EPCL, Lausanne, Switzerland"
+      }
+    },
+    contact: {
+      title: "Let's stay in touch",
+      subtitle: "Interested in my profile? Don't hesitate to contact me to discuss opportunities.",
+      about: {
+        title: "About Me",
+        age: "Swiss, 23 years old",
+        driving: "Driving license: category B",
+        interests: "Interests: Snowboard, Kitesurf, Fitness"
+      },
+      info: {
+        location: "Lausanne, Switzerland",
+        email: "zoe.perriard@gmail.com",
+        social: "Social media"
+      },
+      footer: "© Zoé Perriard · Data & Business Analytics"
+    }
+  }
+};
+
 const BackgroundNetwork = () => {
   const canvasRef = useRef(null);
 
@@ -204,7 +543,7 @@ const BackgroundNetwork = () => {
   );
 };
 
-const Navbar = () => {
+const Navbar = ({ lang, setLang, t }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -214,7 +553,7 @@ const Navbar = () => {
       <div className="nav-container">
         <div className="nav-brand">
           <Layers size={24} color="#58c4dc" />
-          <span>Mon Portfolio</span>
+          <span>{t.nav.brand}</span>
         </div>
 
         <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
@@ -222,12 +561,28 @@ const Navbar = () => {
         </button>
 
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-          <a href="#profil" className="nav-link" onClick={() => setIsOpen(false)}><User size={18} /> Profil</a>
-          <a href="#projets" className="nav-link" onClick={() => setIsOpen(false)}><Target size={18} /> Projets</a>
-          <a href="#competences" className="nav-link" onClick={() => setIsOpen(false)}><BarChart size={18} /> Compétences</a>
-          <a href="#experience" className="nav-link" onClick={() => setIsOpen(false)}><Briefcase size={18} /> Expérience</a>
-          <a href="#formation" className="nav-link" onClick={() => setIsOpen(false)}><GraduationCap size={18} /> Formation</a>
-          <a href="#contact" className="nav-link" onClick={() => setIsOpen(false)}><Mail size={18} /> Contact</a>
+          <a href="#profil" className="nav-link" onClick={() => setIsOpen(false)}><User size={18} /> {t.nav.profil}</a>
+          <a href="#projets" className="nav-link" onClick={() => setIsOpen(false)}><Target size={18} /> {t.nav.projets}</a>
+          <a href="#competences" className="nav-link" onClick={() => setIsOpen(false)}><BarChart size={18} /> {t.nav.competences}</a>
+          <a href="#experience" className="nav-link" onClick={() => setIsOpen(false)}><Briefcase size={18} /> {t.nav.experience}</a>
+          <a href="#formation" className="nav-link" onClick={() => setIsOpen(false)}><GraduationCap size={18} /> {t.nav.formation}</a>
+          <a href="#contact" className="nav-link" onClick={() => setIsOpen(false)}><Mail size={18} /> {t.nav.contact}</a>
+          
+          <div className="lang-selector">
+            <button 
+              className={`lang-btn ${lang === 'fr' ? 'active' : ''}`} 
+              onClick={() => { setLang('fr'); setIsOpen(false); }}
+            >
+              FR
+            </button>
+            <span className="lang-divider">|</span>
+            <button 
+              className={`lang-btn ${lang === 'en' ? 'active' : ''}`} 
+              onClick={() => { setLang('en'); setIsOpen(false); }}
+            >
+              EN
+            </button>
+          </div>
         </div>
       </div>
     </nav>
@@ -235,30 +590,51 @@ const Navbar = () => {
 };
 
 function App() {
+  const [lang, setLang] = useState('fr');
+  const t = translations[lang];
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="App">
       <BackgroundNetwork />
-      <Navbar />
+      <Navbar lang={lang} setLang={setLang} t={t} />
       
       {/* Hero Section */}
       <section className="hero" id="profil">
-        <p className="hero-subtitle">Bonjour, je suis</p>
-        <h1>Zoé <span className="accent">Perriard</span></h1>
+        <p className="hero-subtitle reveal delay-1">{t.hero.greeting}</p>
+        <h1 className="reveal delay-2">{t.hero.name} <span className="accent">{t.hero.surname}</span></h1>
         
-        <div className="description-container">
+        <div className="description-container reveal delay-3">
           <p className="main-desc">
-            Data Analyst, passionnée par les nouvelles technologies, l'innovation et la transformation digitale
+            {t.hero.jobTitle}
           </p>
           <p className="secondary-desc">
-            Passionnée par la data analysis, l'optimisation des processus métier et la transformation digitale, 
-            je suis en dernière année de bachelor en économie d'entreprise en emploi à l'HEIG-VD, avec
-            spécialisation en digitalisation & e-business ainsi qu’en analyse et visualisation de données.
+            {t.hero.description}
           </p>
         </div>
 
-        <div className="hero-buttons">
-          <a href="https://drive.google.com/file/d/1BWF38QW0hslTXcwICHgx2ZfxT-fT_V9R/view?usp=drive_link" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-            <Download size={20} /> Télécharger CV
+        <div className="hero-buttons reveal delay-4">
+          <a href={t.hero.cvLink} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <Download size={20} /> {t.hero.downloadCv}
           </a>
           <a href="https://www.linkedin.com/in/zoe-perriard/" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
             <Linkedin size={20} /> LinkedIn
@@ -267,57 +643,52 @@ function App() {
             <Github size={20} /> GitHub
           </a>
           <a href="mailto:zoe.perriard@gmail.com" className="btn btn-outline">
-            <Mail size={20} /> Contact
+            <Mail size={20} /> {t.hero.contact}
           </a>
         </div>
 
-        <a href="#projets" className="scroll-indicator">
+        <a href="#projets" className="scroll-indicator reveal delay-5">
           <ChevronDown size={32} />
         </a>
       </section>
 
       {/* Projets Section */}
-      <section id="projets">
-        <h2><Target size={32} /> Projets</h2>
+      <section id="projets" className="reveal">
+        <h2><Target size={32} /> {t.projects.title}</h2>
         
         {/* Travail de Bachelor */}
-        <div className="card project-featured" style={{marginBottom: '30px'}}>
+        <div className="card project-featured reveal" style={{marginBottom: '30px'}}>
           <div className="card-header">
             <div className="icon-wrapper"><GraduationCap size={24} /></div>
             <div>
-              <h3>Travail de Bachelor : Planification de voyage & IA</h3>
+              <h3>{t.projects.bachelor.title}</h3>
             </div>
           </div>
           
           <div className="project-content-grid">
             <div className="project-info">
-              <p className="project-tagline">Étude d’opportunité et de faisabilité économique d’une application de planification de voyage assistée par l’IA.</p>
+              <p className="project-tagline">{t.projects.bachelor.tagline}</p>
               
               <div className="project-section">
-                <h4><Search size={16} /> Contexte & Problématique</h4>
-                <p>Analyse de l’opportunité, de la désirabilité et de la viabilité économique d’une application de planification de voyage partiellement automatisée, destinée aux voyageurs seniors autonomes.</p>
+                <h4><Search size={16} /> {t.projects.bachelor.contextTitle}</h4>
+                <p>{t.projects.bachelor.context}</p>
               </div>
 
               <div className="project-section">
-                <h4><Zap size={16} /> Approche & Réalisation</h4>
+                <h4><Zap size={16} /> {t.projects.bachelor.approachTitle}</h4>
                 <ul className="experience-list">
-                  <li>Analyse du problème et du segment cible</li>
-                  <li>Désirabilité · Faisabilité · Viabilité</li>
-                  <li>Analyse de marché (TAM · SAM · SOM)</li>
-                  <li>Proposition de valeur & modèle d’affaires</li>
-                  <li>Conception d’un Proof of Concept (POC) et vision produit</li>
+                  {t.projects.bachelor.approach.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
             
             <div className="project-tech">
               <div className="pills-container">
-                <span className="pill">Désirabilité</span>
-                <span className="pill">Faisabilité</span>
-                <span className="pill">Viabilité</span>
-                <span className="pill">Analyse de m arché</span>
-                <span className="pill">Business Model</span>
-                <span className="pill">IA</span>
+                {t.projects.bachelor.pills.map((pill, i) => (
+                  <span key={i} className="pill">{pill}</span>
+                ))}
               </div>
             </div>
           </div>
@@ -328,24 +699,22 @@ function App() {
           <div className="card">
             <div className="card-header">
               <div className="icon-wrapper"><BarChart size={24} /></div>
-              <h3>Analyse de données SIRH</h3>
+              <h3>{t.projects.sirh.title}</h3>
             </div>
             <div className="project-section">
               <p className="text-muted" style={{marginBottom: '15px'}}>
-                Analyse de données et data visualisation sous Tableau pour comprendre les départs des collaborateurs (attrition) à partir de données RH.
+                {t.projects.sirh.description}
               </p>
               <ul className="experience-list" style={{fontSize: '0.9rem', marginBottom: '20px'}}>
-                <li>Nettoyage et structuration des données</li>
-                <li>Modélisation et transformation des données</li>
-                <li>Création de champs calculés et indicateurs</li>
-                <li>Analyse exploratoire et KPIs d’attrition</li>
-                <li>Dashboards interactifs sur Tableau</li>
+                {t.projects.sirh.tasks.map((task, i) => (
+                  <li key={i}>{task}</li>
+                ))}
               </ul>
             </div>
             <div className="pills-container">
-              <span className="pill">Tableau</span>
-              <span className="pill">Analyse exploratoire</span>
-              <span className="pill">Corrélation</span>
+              {t.projects.sirh.pills.map((pill, i) => (
+                <span key={i} className="pill">{pill}</span>
+              ))}
             </div>
           </div>
 
@@ -353,134 +722,133 @@ function App() {
           <div className="card">
             <div className="card-header">
               <div className="icon-wrapper"><Zap size={24} /></div>
-              <h3>Analyse et optimisation de processus opérationnel</h3>
+              <h3>{t.projects.process.title}</h3>
             </div>
             <div className="project-section">
               <p className="text-muted" style={{marginBottom: '15px'}}>
-                Projet d’analyse de données et de processus réalisé dans un environnement réglementé, visant à améliorer le suivi administratif et la performance opérationnelle.
+                {t.projects.process.description}
               </p>
               <ul className="experience-list" style={{fontSize: '0.9rem', marginBottom: '20px'}}>
-                <li>Cartographie du processus BPMN</li>
-                <li>Analyse des données de suivi</li>
-                <li>Analyse des KPIs (délais, charge, volumes)</li>
-                <li>Structuration et fiabilisation des données</li>
-                <li>Recommandations data-driven</li>
+                {t.projects.process.tasks.map((task, i) => (
+                  <li key={i}>{task}</li>
+                ))}
               </ul>
             </div>
             <div className="pills-container">
-              <span className="pill">Excel</span>
-              <span className="pill">BPMN</span>
-              <span className="pill">Analyse de données</span>
-              <span className="pill">KPIs</span>
+              {t.projects.process.pills.map((pill, i) => (
+                <span key={i} className="pill">{pill}</span>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Compétences Techniques */}
-      <section id="competences">
-        <h2><BarChart size={32} /> Compétences techniques</h2>
+      <section id="competences" className="reveal">
+        <h2><BarChart size={32} /> {t.skills.technical}</h2>
         <div className="grid">
-          <div className="card">
+          <div className="card reveal delay-1">
             <div className="card-header">
               <div className="icon-wrapper"><TrendingUp size={24} /></div>
-              <h3>Analyse et modélisation</h3>
+              <h3>{t.skills.modeling.title}</h3>
             </div>
             <div className="pills-container">
               <span className="pill"><Database size={16} /> SQL</span>
               <span className="pill"><Zap size={16} /> Python</span>
-              <span className="pill"><BarChart size={16} /> Excel avancé (VBA, Power Query, TCD)</span>
-              <span className="pill"><Layers size={16} /> Analyse exploratoire (EDA)</span>
-              <span className="pill"><Search size={16} /> Analyse statistique</span>
-              <span className="pill"><Search size={16} /> Préparation et nettoyage des données</span>
-            </div>
-            </div>
-
-          <div className="card">
-            <div className="card-header">
-              <div className="icon-wrapper"><Search size={24} /></div>
-              <h3>Business Intelligence</h3>
-            </div>
-            <div className="pills-container">
-              <span className="pill"><Layers size={16} /> Tableau</span>
-              <span className="pill"><Layers size={16} /> Data visualisation</span>
-              <span className="pill"><BarChart size={16} /> Tableaux de bord</span>
-              <span className="pill"><TrendingUp size={16} /> Reporting & KPIs</span>
-              <span className="pill"><TrendingUp size={16} /> Aide à la décision</span>
-              <span className="pill"><Search size={16} /> Google Analytics (certifiée)</span>
+              <span className="pill"><BarChart size={16} /> {t.skills.modeling.pills[2]}</span>
+              <span className="pill"><Layers size={16} /> {t.skills.modeling.pills[3]}</span>
+              <span className="pill"><Search size={16} /> {t.skills.modeling.pills[4]}</span>
+              <span className="pill"><Search size={16} /> {t.skills.modeling.pills[5]}</span>
             </div>
           </div>
 
-          <div className="card">
+          <div className="card reveal delay-2">
+            <div className="card-header">
+              <div className="icon-wrapper"><Search size={24} /></div>
+              <h3>{t.skills.bi.title}</h3>
+            </div>
+            <div className="pills-container">
+              <span className="pill"><Layers size={16} /> {t.skills.bi.pills[0]}</span>
+              <span className="pill"><Layers size={16} /> {t.skills.bi.pills[1]}</span>
+              <span className="pill"><BarChart size={16} /> {t.skills.bi.pills[2]}</span>
+              <span className="pill"><TrendingUp size={16} /> {t.skills.bi.pills[3]}</span>
+              <span className="pill"><TrendingUp size={16} /> {t.skills.bi.pills[4]}</span>
+              <span className="pill"><Search size={16} /> {t.skills.bi.pills[5]}</span>
+            </div>
+          </div>
+
+          <div className="card reveal delay-3">
             <div className="card-header">
               <div className="icon-wrapper"><Database size={24} /></div>
-              <h3>Systèmes d'Information</h3>
+              <h3>{t.skills.si.title}</h3>
             </div>
             <div className="pills-container">
               <span className="pill"><Database size={16} /> SAP FI/CO</span>
               <span className="pill"><Layers size={16} /> Odoo</span>
+              <span className="pill"><Users size={16} /> CRM</span>
               <span className="pill"><TrendingUp size={16} /> BPMN</span>
-              <span className="pill"><Zap size={16} /> Automatisation des processus</span>
-              <span className="pill"><Database size={16} /> Gestion et structuration des données</span>
+              <span className="pill"><Zap size={16} /> {t.skills.si.pills[4]}</span>
+              <span className="pill"><Database size={16} /> {t.skills.si.pills[5]}</span>
             </div>
           </div>
 
-          <div className="card">
+          <div className="card reveal delay-4">
             <div className="card-header">
               <div className="icon-wrapper"><Zap size={24} /></div>
-              <h3>Stratégie et performance</h3>
+              <h3>{t.skills.strategy.title}</h3>
             </div>
             <div className="pills-container">
-              <span className="pill"><BarChart size={16} /> Analyse de performance</span>
-              <span className="pill"><Zap size={16} /> Optimisation des processus</span>
-              <span className="pill"><TrendingUp size={16} /> Suivi budgétaire</span>
-              <span className="pill"><Lightbulb size={16} /> Transformation digitale</span>
-              <span className="pill"><Globe size={16} /> e-business</span>
+              <span className="pill"><Target size={16} /> {t.skills.strategy.pills[0]}</span>
+              <span className="pill"><BarChart size={16} /> {t.skills.strategy.pills[1]}</span>
+              <span className="pill"><Zap size={16} /> {t.skills.strategy.pills[2]}</span>
+              <span className="pill"><TrendingUp size={16} /> {t.skills.strategy.pills[3]}</span>
+              <span className="pill"><Lightbulb size={16} /> {t.skills.strategy.pills[4]}</span>
+              <span className="pill"><Globe size={16} /> {t.skills.strategy.pills[5]}</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Compétences Personnelles */}
-      <section id="soft-skills">
-        <h2><Brain size={32} /> Compétences personnelles</h2>
+      <section id="soft-skills" className="reveal">
+        <h2><Brain size={32} /> {t.skills.personal}</h2>
         <div className="pills-grid">
-          <div className="pill-personal"><Brain size={24} /> Approche data-driven et esprit analytique</div>
-          <div className="pill-personal"><Clock size={24} /> Gestion des priorités</div>
-          <div className="pill-personal"><Lightbulb size={24} /> Esprit autodidacte</div>
-          <div className="pill-personal"><Users size={24} /> Travail d’équipe</div>
-          <div className="pill-personal"><Zap size={24} /> Proactive et persévérante</div>
-          <div className="pill-personal"><MessageCircle size={24} /> Sens de l’écoute et de la communication</div>
+          <div className="pill-personal reveal delay-1"><Brain size={24} /> {t.skills.soft[0]}</div>
+          <div className="pill-personal reveal delay-2"><Clock size={24} /> {t.skills.soft[1]}</div>
+          <div className="pill-personal reveal delay-3"><Lightbulb size={24} /> {t.skills.soft[2]}</div>
+          <div className="pill-personal reveal delay-4"><Users size={24} /> {t.skills.soft[3]}</div>
+          <div className="pill-personal reveal delay-5"><Zap size={24} /> {t.skills.soft[4]}</div>
+          <div className="pill-personal reveal delay-5"><MessageCircle size={24} /> {t.skills.soft[5]}</div>
         </div>
       </section>
 
       {/* Langues */}
-      <section>
-        <h2><Globe size={32} /> Langues</h2>
+      <section className="reveal">
+        <h2><Globe size={32} /> {t.languages.title}</h2>
         <div className="card">
           <div className="languages-container">
-            <div className="language-item">
+            <div className="language-item reveal delay-1">
               <div className="language-info">
-                <span className="language-name">Français</span>
-                <span className="language-level">Langue maternelle</span>
+                <span className="language-name">{t.languages.fr.name}</span>
+                <span className="language-level">{t.languages.fr.level}</span>
               </div>
               <div className="progress-bar">
                 <div className="progress-fill" style={{ width: '100%' }}></div>
               </div>
             </div>
-            <div className="language-item">
+            <div className="language-item reveal delay-2">
               <div className="language-info">
-                <span className="language-name">Anglais</span>
-                <span className="language-level">B2</span>
+                <span className="language-name">{t.languages.en.name}</span>
+                <span className="language-level">{t.languages.en.level}</span>
               </div>
               <div className="progress-bar">
                 <div className="progress-fill" style={{ width: '75%' }}></div>
               </div>
             </div>
-            <div className="language-item">
+            <div className="language-item reveal delay-3">
               <div className="language-info">
-                <span className="language-name">Allemand</span>
-                <span className="language-level">B1</span>
+                <span className="language-name">{t.languages.de.name}</span>
+                <span className="language-level">{t.languages.de.level}</span>
               </div>
               <div className="progress-bar">
                 <div className="progress-fill" style={{ width: '60%' }}></div>
@@ -491,133 +859,141 @@ function App() {
       </section>
 
       {/* Expériences */}
-      <section id="experience">
-        <h2><Briefcase size={32} /> Expériences professionnelles</h2>
+      <section id="experience" className="reveal">
+        <h2><Briefcase size={32} /> {t.experience.title}</h2>
         
         <div className="experience-timeline">
-          <div className="card experience-card">
+          <div className="card experience-card reveal">
             <div className="date-badge-experience"><Calendar size={14} /> août 2023 – octobre 2025</div>
-            <h3 className="job-title">Legal Operations Officer</h3>
-            <p className="company-name">Swissquote Bank SA</p>
+            <h3 className="job-title">{t.experience.sq.title}</h3>
+            <p className="company-name">{t.experience.sq.company}</p>
             
-            <h4 className="experience-subtitle">Data & automatisation</h4>
+            <h4 className="experience-subtitle">{t.experience.sq.subtitle1}</h4>
             <ul className="experience-list">
-              <li>Mise à jour régulière des bases données et réalisation de statistiques mensuelles</li>
-              <li>Préparation, nettoyage et analyse exploratoire de données</li>
-              <li>Automatisation de processus via Excel VBA</li>
+              {t.experience.sq.list1.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
 
-            <h4 className="experience-subtitle">Opérations & coordination</h4>
+            <h4 className="experience-subtitle">{t.experience.sq.subtitle2}</h4>
             <ul className="experience-list">
-              <li>Gérer le courrier entrant quotidien en français, allemand, anglais et italien</li>
-              <li>Traitement et suivi de la correspondance avec les autorités</li>
-              <li>Coordination des procédures de blocage de comptes</li>
-              <li>Gestion des délais de réponse aux autorités et notifications aux clients</li>
+              {t.experience.sq.list2.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
+
+            {t.experience.sq.subtitle3 && (
+              <>
+                <h4 className="experience-subtitle">{t.experience.sq.subtitle3}</h4>
+                <ul className="experience-list">
+                  {t.experience.sq.list3.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
 
-          <div className="card experience-card" style={{marginTop: '40px'}}>
+          <div className="card experience-card reveal" style={{marginTop: '40px'}}>
             <div className="date-badge-experience"><Calendar size={14} /> juillet 2022 – juillet 2023</div>
-            <h3 className="job-title">Assistante en gestion comptable</h3>
-            <p className="company-name">Ministère public central</p>
+            <h3 className="job-title">{t.experience.mp.title}</h3>
+            <p className="company-name">{t.experience.mp.company}</p>
             <ul className="experience-list">
-              <li>Etablir les paiements créanciers et gérer les liquidités</li>
-              <li>Collaborer à l’établissement du suivi budgétaire et des statistiques internes</li>
-              <li>Gestion et transferts de biens séquestrés en lien avec les forces de l’ordre</li>
+              {t.experience.mp.list.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          <div className="card experience-card" style={{marginTop: '40px'}}>
+          <div className="card experience-card reveal" style={{marginTop: '40px'}}>
             <div className="date-badge-experience"><Calendar size={14} /> 2018 – 2021</div>
-            <h3 className="job-title">Apprentissage d'employée de commerce</h3>
-            <p className="company-name">Commune de Crissier</p>
+            <h3 className="job-title">{t.experience.app.title}</h3>
+            <p className="company-name">{t.experience.app.company}</p>
             <ul className="experience-list">
-              <li>2020 – 2021 Service des Infrastructures</li>
-              <li>2019 – 2020 Contrôle des habitants</li>
-              <li>2018 – 2019 Services des finances</li>
-              <li>2017 – 2018 Administration & RH</li>
+              {t.experience.app.list.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
       </section>
 
       {/* Formation */}
-      <section id="formation">
-        <h2><GraduationCap size={32} /> Formation</h2>
-        <div className="card">
+      <section id="formation" className="reveal">
+        <h2><GraduationCap size={32} /> {t.formation.title}</h2>
+        <div className="card reveal delay-1">
           <div className="formation-card">
             <div className="icon-wrapper"><GraduationCap size={24} /></div>
             <div className="formation-content">
               <div className="date-badge"><Calendar size={14} /> 2022 – 2026</div>
-              <h3>Bachelor of Science HES-SO, économie d'entreprise</h3>
-              <p className="school-name">HEIG-VD, Yverdon</p>
-              <p className="text-muted" style={{fontSize: '0.9rem', marginTop: '5px'}}>Option+ Défis du management à l'ère de la digitalisation</p>
+              <h3>{t.formation.bachelor.title}</h3>
+              <p className="text-muted" style={{fontSize: '0.9rem', marginTop: '5px'}}>{t.formation.bachelor.option}</p>
+              <p className="school-name">{lang === 'en' ? t.formation.bachelor.schoolname : t.formation.bachelor.school}</p>
             </div>
           </div>
         </div>
-        <div className="card" style={{marginTop: '20px'}}>
+        <div className="card reveal delay-2" style={{marginTop: '20px'}}>
           <div className="formation-card">
             <div className="icon-wrapper"><GraduationCap size={24} /></div>
             <div className="formation-content">
               <div className="date-badge"><Calendar size={14} /> 2021 – 2022</div>
-              <h3>Maturité post-CFC, économie et services</h3>
-              <p className="school-name">EPCL, Lausanne</p>
+              <h3>{t.formation.maturite.title}</h3>
+              <p className="school-name">{lang === 'en' ? t.formation.maturite.schoolname : t.formation.maturite.school}</p>
             </div>
           </div>
         </div>
-        <div className="card" style={{marginTop: '20px'}}>
+        <div className="card reveal delay-3" style={{marginTop: '20px'}}>
           <div className="formation-card">
             <div className="icon-wrapper"><GraduationCap size={24} /></div>
             <div className="formation-content">
               <div className="date-badge"><Calendar size={14} /> 2017 – 2021</div>
-              <h3>CFC d’employée de commerce, administration publique</h3>
-              <p className="school-name">EPCL, Lausanne</p>
+              <h3>{t.formation.cfc.title}</h3>
+              <p className="school-name">{lang === 'en' ? t.formation.cfc.schoolname : t.formation.cfc.school}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact">
-        <h2>Restons en contact</h2>
-        <p className="main-desc" style={{marginBottom: '40px'}}>
-          Intéressé par mon profil ? N'hésitez pas à me contacter pour discuter d'opportunités.
+      <section id="contact" className="reveal">
+        <h2>{t.contact.title}</h2>
+        <p className="main-desc reveal delay-1" style={{marginBottom: '40px'}}>
+          {t.contact.subtitle}
         </p>
         <div className="grid-contact">
-          <div className="card">
+          <div className="card reveal delay-2">
             <div style={{display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px'}}>
-              <User size={24} color="#58c4dc" />
-              <h3 style={{margin: 0}}>À propos de moi</h3>
+              <h3 style={{margin: 0}}>{t.contact.about.title}</h3>
             </div>
             <div style={{display: 'flex', flexDirection: 'column', gap: '15px'}}>
               <div style={{display: 'flex', alignItems: 'center', gap: '12px'}}>
-                <Camera size={20} color="#58c4dc" /> <span>Suissesse, 23 ans</span>
+                <Camera size={20} color="#58c4dc" /> <span>{t.contact.about.age}</span>
               </div>
               <div style={{display: 'flex', alignItems: 'center', gap: '12px'}}>
-                <Car size={20} color="#58c4dc" /> <span>Permis de conduire : catégorie B</span>
+                <Car size={20} color="#58c4dc" /> <span>{t.contact.about.driving}</span>
               </div>
               <div style={{display: 'flex', alignItems: 'center', gap: '12px'}}>
-                <Heart size={20} color="#58c4dc" /> <span>Intérêt : Snowboard, Kitesurf, Fitness</span>
+                <Heart size={20} color="#58c4dc" /> <span>{t.contact.about.interests}</span>
               </div>
             </div>
           </div>
-          <div className="card">
-            <h3>Contact</h3>
-            <div style={{display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '20px'}}>
+          <div className="card reveal delay-3">
+            <h3 style={{marginBottom: '10px'}}>Contact</h3>
+            <div style={{display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '10px'}}>
               <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                <Mail size={20} color="#58c4dc" /> zoe.perriard@gmail.com
+                <Mail size={20} color="#58c4dc" /> {t.contact.info.email}
               </div>
               <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
                 <Phone size={20} color="#58c4dc" /> +41 76 748 62 82
               </div>
               <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                <MapPin size={20} color="#58c4dc" /> 1023 Crissier, Suisse
+                <MapPin size={20} color="#58c4dc" /> {t.contact.info.location}
               </div>
             </div>
           </div>
-          <div className="card">
-            <h3>Réseaux sociaux</h3>
-            <div className="hero-buttons" style={{flexDirection: 'column', alignItems: 'flex-start', marginTop: '20px'}}>
+          <div className="card reveal delay-4">
+            <h3 style={{marginBottom: '10px'}}>{t.contact.info.social}</h3>
+            <div className="hero-buttons" style={{flexDirection: 'column', alignItems: 'flex-start', marginTop: '10px'}}>
               <a href="https://www.linkedin.com/in/zoe-perriard/" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{width: '100%', justifyContent: 'center'}}>
                 <Linkedin size={20} /> LinkedIn
               </a>
@@ -630,7 +1006,7 @@ function App() {
       </section>
 
       <footer>
-        <p>&copy; 2023 Zoé Perriard. Tous droits réservés.</p>
+        <p>{t.contact.footer}</p>
       </footer>
     </div>
   );
