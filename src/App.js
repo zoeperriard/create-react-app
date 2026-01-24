@@ -53,7 +53,7 @@ const translations = {
       jobTitle: "Data Analyst, passionnée par les nouvelles technologies, l'innovation et la transformation digitale",
       description: "Passionnée par la data analysis, l'optimisation des processus métier et la transformation digitale, je suis en dernière année de bachelor en économie d'entreprise en emploi à l'HEIG-VD, avec spécialisation en digitalisation & e-business ainsi qu’en analyse et visualisation de données.",
       downloadCv: "Télécharger CV",
-      cvLink: "https://drive.google.com/file/d/1BWF38QW0hslTXcwICHgx2ZfxT-fT_V9R/view?usp=drive_link",
+      cvLink: "https://drive.google.com/file/d/1YUMHkd4dW1K0PrGQPaHNzdQ4GvPNNTlN/view?usp=drive_link",
       contact: "Contact"
     },
     projects: {
