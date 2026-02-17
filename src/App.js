@@ -52,7 +52,7 @@ const translations = {
       surname: "Perriard",
       jobTitle: "Data Analyst, passionnée par les nouvelles technologies, l'innovation et la transformation digitale",
       description: "Passionnée par la data analysis, l'optimisation des processus métier et la transformation digitale, je suis en dernière année de bachelor en économie d'entreprise en emploi à l'HEIG-VD, avec spécialisation en digitalisation & e-business ainsi qu’en analyse et visualisation de données.",
-      downloadCv: "Télécharger CV",
+      downloadCv: "CV",
       cvLink: "https://drive.google.com/file/d/1YUMHkd4dW1K0PrGQPaHNzdQ4GvPNNTlN/view?usp=drive_link",
       contact: "Contact"
     },
@@ -128,9 +128,9 @@ const translations = {
     },
     languages: {
       title: "Langues",
-      fr: { name: "Français", level: "Langue maternelle" },
-      en: { name: "Anglais", level: "B2" },
-      de: { name: "Allemand", level: "B1" }
+      fr: { name: "Français", level: "Langue maternelle", flag: "🇫🇷" },
+      en: { name: "Anglais", level: "B2", flag: "🇬🇧" },
+      de: { name: "Allemand", level: "B1", flag: "🇩🇪" }
     },
     experience: {
       title: "Expériences professionnelles",
@@ -174,16 +174,18 @@ const translations = {
     formation: {
       title: "Formation",
       bachelor: {
-        title: "Bachelor of Science HES-SO, économie d'entreprise",
+        title: "Bachelor HES-SO",
+        subtitle: "Économie d'Entreprise",
         school: "HEIG-VD, Yverdon",
-        option: "Digitalisation & E-Business et Analyse & visualisation de données"
       },
       maturite: {
-        title: "Maturité post-CFC, économie et services",
+        title: "Maturité post-CFC",
+        subtitle: "Économie et Services",
         school: "EPCL, Lausanne"
       },
       cfc: {
-        title: "CFC d’employée de commerce, administration publique",
+        title: "CFC d’employée de commerce",
+        subtitle: "Administration Publique",
         school: "EPCL, Lausanne"
       }
     },
@@ -192,16 +194,16 @@ const translations = {
       subtitle: "Intéressé par mon profil ? N'hésitez pas à me contacter pour discuter d'opportunités.",
       about: {
         title: "À propos de moi",
-        age: "Suissesse, 23 ans",
+        age: "Suissesse",
         driving: "Permis de conduire : catégorie B",
-        interests: "Intérêt : Snowboard, Kitesurf, Fitness"
+        interests: "Intérêts : Snowboard, Kitesurf, Fitness"
       },
       info: {
         location: "Lausanne, Suisse",
         email: "zoe.perriard@gmail.com",
         social: "Réseaux sociaux"
       },
-      footer: "© Zoé Perriard · Data & Business Analytics"
+      footer: "©2026 Zoé Perriad. Tous droits réservés."
     }
   },
   en: {
@@ -215,12 +217,11 @@ const translations = {
       contact: "Contact"
     },
     hero: {
-      greeting: "Hi, I am",
       name: "Zoé",
       surname: "Perriard",
-      jobTitle: "Data Analyst, passionate about new technologies, innovation, and digital transformation",
+      jobTitle: "Business Analyst",
       description: "Passionate about data analysis, business process optimization, and digital transformation, I am in my final year of a Bachelor's degree in Business Administration while working at HEIG-VD, specializing in digitalization & e-business as well as data analysis and visualization.",
-      downloadCv: "Download CV",
+      downloadCv: "CV",
       cvLink: "https://drive.google.com/file/d/1WA989e5CMMenyba5MDZ7Jf7p0u-MatFk/view?usp=drive_link",
       contact: "Contact"
     },
@@ -296,9 +297,9 @@ const translations = {
     },
     languages: {
       title: "Languages",
-      fr: { name: "French", level: "Native language" },
-      en: { name: "English", level: "B2" },
-      de: { name: "German", level: "B1" }
+      fr: { name: "French", level: "Native language", flag: "🇫🇷" },
+      en: { name: "English", level: "B2", flag: "🇬🇧" },
+      de: { name: "German", level: "B1", flag: "🇩🇪" }
     },
     experience: {
       title: "Professional Experience",
@@ -342,16 +343,18 @@ const translations = {
     formation: {
       title: "Education",
       bachelor: {
-        title: "Bachelor of Science HES-SO in Business Administration",
-        option: "Digitalization & E-Business and Business Data Analysis & Visualization",
+        title: "Bachelor HES-SO",
+        subtitle: "Économie d'Entreprise",
         schoolname: "HEIG-VD, Yverdon, Switzerland"
       },
       maturite: {
-        title: "Post-CFC Maturity, Economy and Services",
+        title: "Post-CFC Maturity",
+        subtitle: "Economy and Services",
         schoolname: "EPCL, Lausanne, Switzerland"
       },
       cfc: {
         title: "Federal VET Diploma (CFC), Commercial Employee",
+        subtitle: "Public Administration",
         schoolname: "EPCL, Lausanne, Switzerland"
       }
     },
@@ -615,11 +618,11 @@ function App() {
 
   return (
     <div className="App">
-      <BackgroundNetwork />
       <Navbar lang={lang} setLang={setLang} t={t} />
       
       {/* Hero Section */}
       <section className="hero" id="profil">
+        <BackgroundNetwork />
         <p className="hero-subtitle reveal delay-1">{t.hero.greeting}</p>
         <h1 className="reveal delay-2">{t.hero.name} <span className="accent">{t.hero.surname}</span></h1>
         
@@ -637,13 +640,13 @@ function App() {
             <Download size={20} /> {t.hero.downloadCv}
           </a>
           <a href="https://www.linkedin.com/in/zoe-perriard/" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-            <Linkedin size={20} /> LinkedIn
+            <Linkedin size={20} />
           </a>
           <a href="https://github.com/zoeperriard" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-            <Github size={20} /> GitHub
+            <Github size={20} />
           </a>
-          <a href="mailto:zoe.perriard@gmail.com" className="btn btn-outline">
-            <Mail size={20} /> {t.hero.contact}
+          <a href="#contact" className="btn btn-outline" title={t.hero.contact}>
+            <Mail size={20} />
           </a>
         </div>
 
@@ -822,36 +825,83 @@ function App() {
         </div>
       </section>
 
-      {/* Langues */}
-      <section className="reveal">
-        <h2><Globe size={32} /> {t.languages.title}</h2>
-        <div className="card">
-          <div className="languages-container">
-            <div className="language-item reveal delay-1">
-              <div className="language-info">
-                <span className="language-name">{t.languages.fr.name}</span>
-                <span className="language-level">{t.languages.fr.level}</span>
-              </div>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '100%' }}></div>
-              </div>
-            </div>
-            <div className="language-item reveal delay-2">
-              <div className="language-info">
-                <span className="language-name">{t.languages.en.name}</span>
-                <span className="language-level">{t.languages.en.level}</span>
-              </div>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '75%' }}></div>
+      {/* Langues et Formation side by side */}
+      <section className="reveal section-flex-container">
+        <div className="section-column" id="formation">
+          <h2><GraduationCap size={32} /> {t.formation.title}</h2>
+          <div className="experience-timeline">
+            <div className="experience-card reveal delay-1">
+              <div className="formation-card">
+                <div className="formation-content">
+                  <div className="date-badge">2022 – 2026</div>
+                  <h3>
+                    {t.formation.bachelor.title}
+                    <br />
+                    <span className="degree-subtitle">{t.formation.bachelor.subtitle}</span>
+                  </h3>
+                  <p className="school-name">{lang === 'en' ? t.formation.bachelor.schoolname : t.formation.bachelor.school}</p>
+                </div>
               </div>
             </div>
-            <div className="language-item reveal delay-3">
-              <div className="language-info">
-                <span className="language-name">{t.languages.de.name}</span>
-                <span className="language-level">{t.languages.de.level}</span>
+            <div className="experience-card reveal delay-2" style={{marginTop: '20px'}}>
+              <div className="formation-card">
+                <div className="formation-content">
+                  <div className="date-badge">2021 – 2022</div>
+                  <h3>
+                    {t.formation.maturite.title}
+                    <br />
+                    <span className="degree-subtitle">{t.formation.maturite.subtitle}</span>
+                  </h3>
+                  <p className="school-name">{lang === 'en' ? t.formation.maturite.schoolname : t.formation.maturite.school}</p>
+                </div>
               </div>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '60%' }}></div>
+            </div>
+            <div className="experience-card reveal delay-3" style={{marginTop: '20px'}}>
+              <div className="formation-card">
+                <div className="formation-content">
+                  <div className="date-badge">2017 – 2021</div>
+                  <h3>
+                    {t.formation.cfc.title}
+                    <br />
+                    <span className="degree-subtitle">{t.formation.cfc.subtitle}</span>
+                  </h3>
+                  <p className="school-name">{lang === 'en' ? t.formation.cfc.schoolname : t.formation.cfc.school}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="section-column">
+          <div className="card">
+            <h3 style={{ marginBottom: '25px' }}>{t.languages.title}</h3>
+            <div className="languages-container">
+              <div className="language-item reveal delay-1">
+                <div className="language-info">
+                  <span className="language-name">{t.languages.fr.flag} {t.languages.fr.name}</span>
+                  <span className="language-level">{t.languages.fr.level}</span>
+                </div>
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{ width: '100%' }}></div>
+                </div>
+              </div>
+              <div className="language-item reveal delay-2">
+                <div className="language-info">
+                  <span className="language-name">{t.languages.en.flag} {t.languages.en.name}</span>
+                  <span className="language-level">{t.languages.en.level}</span>
+                </div>
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{ width: '75%' }}></div>
+                </div>
+              </div>
+              <div className="language-item reveal delay-3">
+                <div className="language-info">
+                  <span className="language-name">{t.languages.de.flag} {t.languages.de.name}</span>
+                  <span className="language-level">{t.languages.de.level}</span>
+                </div>
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{ width: '60%' }}></div>
+                </div>
               </div>
             </div>
           </div>
@@ -863,8 +913,7 @@ function App() {
         <h2><Briefcase size={32} /> {t.experience.title}</h2>
         
         <div className="experience-timeline">
-          <div className="card experience-card reveal">
-            <div className="date-badge-experience"><Calendar size={14} /> août 2023 – octobre 2025</div>
+          <div className="experience-card reveal">
             <h3 className="job-title">{t.experience.sq.title}</h3>
             <p className="company-name">{t.experience.sq.company}</p>
             
@@ -894,8 +943,7 @@ function App() {
             )}
           </div>
 
-          <div className="card experience-card reveal" style={{marginTop: '40px'}}>
-            <div className="date-badge-experience"><Calendar size={14} /> juillet 2022 – juillet 2023</div>
+          <div className="experience-card reveal" style={{marginTop: '40px'}}>
             <h3 className="job-title">{t.experience.mp.title}</h3>
             <p className="company-name">{t.experience.mp.company}</p>
             <ul className="experience-list">
@@ -905,8 +953,7 @@ function App() {
             </ul>
           </div>
 
-          <div className="card experience-card reveal" style={{marginTop: '40px'}}>
-            <div className="date-badge-experience"><Calendar size={14} /> 2018 – 2021</div>
+          <div className="experience-card reveal" style={{marginTop: '40px'}}>
             <h3 className="job-title">{t.experience.app.title}</h3>
             <p className="company-name">{t.experience.app.company}</p>
             <ul className="experience-list">
@@ -914,42 +961,6 @@ function App() {
                 <li key={i}>{item}</li>
               ))}
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Formation */}
-      <section id="formation" className="reveal">
-        <h2><GraduationCap size={32} /> {t.formation.title}</h2>
-        <div className="card reveal delay-1">
-          <div className="formation-card">
-            <div className="icon-wrapper"><GraduationCap size={24} /></div>
-            <div className="formation-content">
-              <div className="date-badge"><Calendar size={14} /> 2022 – 2026</div>
-              <h3>{t.formation.bachelor.title}</h3>
-              <p className="text-muted" style={{fontSize: '0.9rem', marginTop: '5px'}}>{t.formation.bachelor.option}</p>
-              <p className="school-name">{lang === 'en' ? t.formation.bachelor.schoolname : t.formation.bachelor.school}</p>
-            </div>
-          </div>
-        </div>
-        <div className="card reveal delay-2" style={{marginTop: '20px'}}>
-          <div className="formation-card">
-            <div className="icon-wrapper"><GraduationCap size={24} /></div>
-            <div className="formation-content">
-              <div className="date-badge"><Calendar size={14} /> 2021 – 2022</div>
-              <h3>{t.formation.maturite.title}</h3>
-              <p className="school-name">{lang === 'en' ? t.formation.maturite.schoolname : t.formation.maturite.school}</p>
-            </div>
-          </div>
-        </div>
-        <div className="card reveal delay-3" style={{marginTop: '20px'}}>
-          <div className="formation-card">
-            <div className="icon-wrapper"><GraduationCap size={24} /></div>
-            <div className="formation-content">
-              <div className="date-badge"><Calendar size={14} /> 2017 – 2021</div>
-              <h3>{t.formation.cfc.title}</h3>
-              <p className="school-name">{lang === 'en' ? t.formation.cfc.schoolname : t.formation.cfc.school}</p>
-            </div>
           </div>
         </div>
       </section>
@@ -995,10 +1006,10 @@ function App() {
             <h3 style={{marginBottom: '10px'}}>{t.contact.info.social}</h3>
             <div className="hero-buttons" style={{flexDirection: 'column', alignItems: 'flex-start', marginTop: '10px'}}>
               <a href="https://www.linkedin.com/in/zoe-perriard/" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{width: '100%', justifyContent: 'center'}}>
-                <Linkedin size={20} /> LinkedIn
+                <Linkedin size={20} />
               </a>
               <a href="https://github.com/zoeperriard" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{width: '100%', justifyContent: 'center'}}>
-                <Github size={20} /> GitHub
+                <Github size={20} />
               </a>
             </div>
           </div>

@@ -33,7 +33,7 @@ body {
 
 /* Background Network */
 .bg-network-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -140,6 +140,11 @@ section {
   padding: 100px 50px;
   max-width: 1200px;
   margin: 0 auto;
+  border-top: 1px solid var(--card-border);
+}
+
+section:first-of-type {
+  border-top: none;
 }
 
 h1, h2, h3 {
@@ -167,6 +172,7 @@ h3 {
 /* Hero */
 .hero {
   position: relative;
+  overflow: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -316,6 +322,32 @@ h3 {
 @media (max-width: 768px) {
   .grid-contact {
     grid-template-columns: 1fr;
+  }
+}
+
+.section-flex-container {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.section-column {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .section-flex-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .section-column {
+    width: 100%;
+  }
+
+  .section-column:not(:last-child) {
+    margin-bottom: 50px;
   }
 }
 
@@ -559,26 +591,33 @@ h3 {
   bottom: 0;
   width: 2px;
   background: linear-gradient(to bottom, var(--primary), rgba(88, 196, 220, 0.1));
-  box-shadow: 0 0 15px var(--glow);
 }
 
 .experience-card {
   text-align: left;
   position: relative;
+  padding: 20px 0; /* Ajout de padding vertical quand il n'y a plus de card */
+}
+
+.experience-card.card {
+  padding: 40px; /* Restaure le padding original si la classe card est présente */
 }
 
 .experience-card::before {
   content: "";
   position: absolute;
-  left: -40px;
-  top: 40px;
+  left: -41px;
+  top: 30px; /* Aligné avec le padding: 20px 0 + un peu de décalage pour le titre */
   width: 20px;
   height: 20px;
   background: var(--bg-dark);
   border: 3px solid var(--primary);
   border-radius: 50%;
   z-index: 2;
-  box-shadow: 0 0 10px var(--primary);
+}
+
+.experience-card.card::before {
+  top: 40px; /* Aligné avec padding: 40px du card original */
 }
 
 @media (max-width: 768px) {
@@ -586,6 +625,9 @@ h3 {
     left: -25px;
     width: 15px;
     height: 15px;
+    top: 25px;
+  }
+  .experience-card.card::before {
     top: 35px;
   }
 }
@@ -594,14 +636,10 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(88, 196, 220, 0.15);
   color: var(--primary);
-  padding: 6px 16px;
-  border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 20px;
-  border: 1px solid rgba(88, 196, 220, 0.3);
 }
 
 .job-title {
@@ -620,6 +658,7 @@ h3 {
 .experience-list {
   list-style: none;
   padding: 0;
+  margin-left: -25px; /* Align bullet points with years (counteracting li padding-left) */
 }
 
 .experience-list li {
@@ -636,11 +675,10 @@ h3 {
   position: absolute;
   left: 0;
   top: 10px;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background-color: var(--primary);
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--primary);
 }
 
 .experience-subtitle {
@@ -669,13 +707,16 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(88, 196, 220, 0.1);
   color: var(--primary);
-  padding: 4px 12px;
-  border-radius: 6px;
   font-size: 0.85rem;
   margin-bottom: 15px;
   font-weight: 500;
+}
+
+.degree-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-muted);
 }
 
 .school-name {
@@ -763,7 +804,13 @@ footer {
 
 @media (max-width: 768px) {
   .hero h1 { font-size: 3rem; }
-  section { padding: 60px 20px; }
+  section { 
+    padding: 60px 20px; 
+    border-top: 1px solid var(--card-border);
+  }
+  section:first-of-type {
+    border-top: none;
+  }
   .hero { align-items: center; text-align: center; }
   .hero-buttons { 
     flex-direction: column;
