@@ -166,14 +166,14 @@ const uiText = {
         },
         // Hero
         hero: {
-            name: 'Yannick Wild',
+            name: 'Zoé Perriard',
             tagline: 'Information Systems Engineer',
             bio: 'Complex systems deserve simple design. I improve business processes by aligning operations with effective information systems.',
             downloadCV: 'CV',
             cvLink: 'https://drive.google.com/file/d/1h_UvJLkhkZ5OHcpkZoMtuPEwLMzN6MBT/view?usp=sharing',
             contact: 'Contact',
-            linkedin: 'https://www.linkedin.com/in/yannick-wild/',
-            github: 'https://github.com/yanowild',
+            linkedin: 'https://www.linkedin.com/in/zoe-perriard/',
+            github: 'https://github.com/zoeperriard',
             seeMore: 'See more'
         },
         // Projects
@@ -356,9 +356,8 @@ const uiText = {
             ],
             languagesSkills: [
                 '🇫🇷 French: Native',
-                '🇬🇧 English: Native',
-                '🇪🇸 Spanish: Native',
-                '🇮🇹 Italian: Fluent (B2)'
+                '🇬🇧 English: Fluent (B2)',
+                '🇩🇪 German: Intermediate (B2)',
             ]
         },
         // Experience
@@ -366,32 +365,25 @@ const uiText = {
             title: 'Experience',
             items: [
                 {
-                    company: "Travelpop",
-                    location: "Personal Project",
-                    role: "Full Stack Dev",
-                    period: "2024 - Present",
-                    description: ["Building a travel app (web + mobile) where users can:", "manage reservations, itineraries, travel documentation, and budgets."," Invite other users to edit or view a trip.", "Interact with AI and Google Maps directly in the app."]
+                    company: "Swissquote Bank SA",
+                    location: "Gland",
+                    role: "Legal Operations Officer",
+                    period: "2023 - 2025",
+                    description: ["Maintenance of operational datasets and production of monthly statistical reports.", "Data preparation, cleaning, and exploratory analysis.","Process automation using Excel (VBA, Pivot Tables, Power Query).", "Coordination of operational information flows in a multilingual environment."]
                 },
                 {
-                    company: "GF Machining Solutions",
-                    location: "Geneva",
-                    role: "Product Owner",
+                    company: "Public Prosecutor’s Office",
+                    location: "Renens",
+                    role: "Accounting Management Assistant",
                     period: "2021 - 2023",
-                    description: ["Led the implementation of SAP FSM to optimize global service operations.", "Analyzed service processes and ERP data in Europe, US, China, and APAC."," Designed standard service processes in SAP FSM.", "Defined KPIs and configured dashboards in SAP Analytics Cloud."]
+                    description: ["Processing of creditor payments and cash flow management.", "Contribution to budget monitoring and internal statistical reporting.","Management and transfer of seized assets in coordination with law enforcement."]
                 },
                 {
-                    company: "Sunnyland Consulting",
-                    location: "Madrid",
-                    role: "Project Manager",
-                    period: "2019 - 2021",
-                    description: ["Managed a team to deliver end-to-end procurement services for luxury hotel renovations.", "Procurement services included: budget control, purchasing, deliveries, and installations.", "Implemented a new operational structure to improve workflow productivity."]
-                },
-                {
-                    company: ["Beau-Rivage Palace", "Hotel Bernerhof", "Grand Hôtel & Centre Thermal"],
-                    location: ["Lausanne", "Grindelwald", "Yverdon"],
-                    role: "Hotel Ops",
-                    period: "2014 – 2017",
-                    description: "Operational experience in F&B (service & kitchen), and front office."
+                    company: "Municipality of Crissier",
+                    location: "Crissier",
+                    role: "Commercial Employee Apprentice",
+                    period: "2017 - 2021",
+                    description: ["Infrastructures Services", "Population Office", "Finance Department", "Administration & Human Resources"]
                 }
             ]
         },
@@ -400,14 +392,19 @@ const uiText = {
             title: 'Education',
             items: [
                 {
-                    school: "HEC Lausanne",
-                    degree: "Master in Information Systems & Digital Innovation",
-                    period: "2024 - 2026"
+                    school: "HEIG-VD, Yverdon",
+                    degree: "Bachelor of Science, Business Administration",
+                    period: "2022 - 2026"
                 },
                 {
-                    school: "EHL École Hôtelière de Lausanne",
-                    degree: "Bachelor in Hospitality Management",
-                    period: "2016 - 2020"
+                    school: "EPCL, Lausanne",
+                    degree: "Professional Baccalaureate (post-CFC)",
+                    period: "2021 - 2022"
+                },
+                {
+                    school: "EPCL, Lausanne",
+                    degree: "CFC Commercial Business",
+                    period: "2017 - 2021"
                 }
             ]
         },
@@ -417,8 +414,8 @@ const uiText = {
             interested: 'Interested in improving your systems?',
             letsConnect: "Let's connect.",
             socials: 'Socials',
-            phone: "+41 79 910 10 84",
-            email: "wildyannick1@gmail.com",
+            phone: "+41 76 748 62 82",
+            email: "zoe.perriard@gmail.com",
             location: "Switzerland",
             nationality: "Swiss"
         },
@@ -439,14 +436,14 @@ const uiText = {
         },
         // Hero
         hero: {
-            name: 'Yannick Wild',
+            name: 'Zoé Perraird',
             tagline: 'Ingénieur Systèmes d\'Information',
             bio: "Les systèmes complexes méritent un design simple. J’optimise les processus métier en alignant opérations et systèmes d’information.",
             downloadCV: 'CV',
             cvLink: 'https://drive.google.com/file/d/1xjdaQb2RPjO0fWjo-KNL8p_Sb8oXoiIX/view?usp=sharing',
             contact: 'Contact',
-            linkedin: 'https://www.linkedin.com/in/yannick-wild/',
-            github: 'https://github.com/yanowild',
+            linkedin: 'https://www.linkedin.com/in/zoe-perriard/',
+            github: 'https://github.com/zoeperriard',
             seeMore: 'Voir plus'
         },
         // Projects
@@ -630,10 +627,9 @@ const uiText = {
                 'Esprit d\'équipe'
             ],
             languagesSkills: [
-                '🇫🇷 Français : Natif',
-                '🇬🇧 Anglais : Natif',
-                '🇪🇸 Espagnol : Natif',
-                '🇮🇹 Italien : Courant (B2)'
+                '🇫🇷 Français : Langue maternelle',
+                '🇬🇧 Anglais : Courant (B2)',
+                '🇩🇪 Allemand : Intermédiaire (B2)'
             ]
         },
         // Experience
@@ -641,32 +637,25 @@ const uiText = {
             title: 'Expérience',
             items: [
                 {
-                    company: "Travelpop",
-                    location: "Projet Personnel",
-                    role: "Full Stack Dev",
-                    period: "2024 - Présent",
-                    description: ["Développement d'une application de voyages (web + mobile) permettant aux utilisateurs de:", "Gérer les réservations, itinéraires, documents de voyage et budgets.", "Inviter d'autres utilisateurs à collaborer sur un voyage.", "Interagir avec l'IA et Google Maps directement dans l'application."]
+                    company: "Swissquote Bank SA",
+                    location: "Gland",
+                    role: "Legal Operations Officer",
+                    period: "2023 - 2025",
+                    description: ["Mise à jour régulière des bases données et réalisation de statistiques mensuelles.", "Préparation, nettoyage et analyse exploratoire de données.", "Automatisation de processus via Excel (macros VBA, tableaux croisés dynamiques, Power Query).", "Gestion et traitement de la correspondance multilingue avec les autorités."]
                 },
                 {
-                    company: "GF Machining Solutions",
-                    location: "Genève",
-                    role: "Product Owner",
-                    period: "2021 - 2023",
-                    description: ["Pilotage de l’implémentation globale de SAP FSM pour optimiser la gestion des services et les flux de travail.", "Analyse des processus de service et des données ERP en Europe, États-Unis, Chine et APAC.", "Conception de processus de service standardisés dans SAP FSM.", "Définition de KPIs et configuration de tableaux de bord dans SAP Analytics Cloud."]
+                    company: "Ministère public cental",
+                    location: "Renens",
+                    role: "Assistante en gestion comptable",
+                    period: "2022 - 2023",
+                    description: ["Etablir les paiements créanciers et gérer les liquidités.", "Collaborer à l’établissement du suivi budgétaire et des statistiques internes.", "Gestion et transferts de biens séquestrés en lien avec les forces de l’ordre."]
                 },
                 {
-                    company: "Sunnyland Consulting",
-                    location: "Madrid",
-                    role: "Chef de Projet",
-                    period: "2019 - 2021",
-                    description: ["Pilotage d’une équipe en charge de l’approvisionnement pour des projets de rénovation d’hôtels de luxe.", "Responsabilités : contrôle budgétaire, sourcing, achats, livraisons et installations.", "Déploiement d’une nouvelle structure opérationnelle afin d’optimiser les flux de travail et la productivité."]
-                },
-                {
-                    company: ["Beau-Rivage Palace", "Hotel Bernerhof", "Grand Hôtel & Centre Thermal"],
-                    location: ["Lausanne", "Grindelwald", "Yverdon"],
-                    role: "Hôtellerie",
-                    period: "2014 – 2017",
-                    description: "Expérience opérationnelle en F&B (service & cuisine) et réception."
+                    company: "Commune de Crissier",
+                    location: "Crissier",
+                    role: "Apprentissage d'employée de commerce",
+                    period: "2017 - 2021",
+                    description: ["Administration & ressources humaines", "Services des finances", "Office de la population.", "Service Infrastructures"]
                 }
             ]
         },
@@ -675,14 +664,19 @@ const uiText = {
             title: 'Formation',
             items: [
                 {
-                    school: "HEC Lausanne",
-                    degree: "Master en Systèmes d'Information & Innovation Digitale",
-                    period: "2024 - 2026"
+                    school: "HEIG-VD, Yverdon",
+                    degree: "Bachelor HES-SO, économie d'entreprise",
+                    period: "2022 - 2026"
                 },
                 {
-                    school: "EHL École Hôtelière de Lausanne",
-                    degree: "Bachelor en Management Hôtelier",
-                    period: "2016 - 2020"
+                    school: "EPCL, Lausanne",
+                    degree: "Maturité professionnelle post-CFC",
+                    period: "2021 - 2022"
+                },
+                {
+                    school: "EPCL, Lausanne",
+                    degree: "CFC d’employée de commerce",
+                    period: "2017 - 2021"
                 }
             ]
         },
@@ -692,14 +686,14 @@ const uiText = {
             interested: 'Vous souhaitez optimiser vos systèmes ?',
             letsConnect: 'Prenons contact.',
             socials: 'Réseaux',
-            phone: "+41 79 910 10 84",
-            email: "wildyannick1@gmail.com",
+            phone: "+41 76 748 62 82",
+            email: "zoe.perriard@gmail.com",
             location: "Suisse",
             nationality: "Suisse"
         },
         // Footer
         footer: {
-            copyright: '© {year} Yannick Wild. Tous droits réservés.',
+            copyright: '© {year} Zoé Perriard. Tous droits réservés.',
             extra: ["Fitness", "Kitesurf", "Snowboard"]
         }
     }
@@ -1460,10 +1454,10 @@ const Portfolio = () => {
                             <div>
                                 <h4 className={`text-base font-semibold mb-4 ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.contact.socials || 'Socials'}</h4>
                                 <div className="flex gap-4">
-                                    <a href="https://www.linkedin.com/in/yannick-wild/" target="_blank" rel="noopener noreferrer" className={`p-4 rounded-full transition-colors border ${darkMode ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-blue-400 border-transparent' : 'bg-white text-[#1F2933] hover:bg-[#EDEFF2] hover:text-[#2F5FD7] border-[#D8DCE3]'}`}>
+                                    <a href="https://www.linkedin.com/in/zoe-perriard/" target="_blank" rel="noopener noreferrer" className={`p-4 rounded-full transition-colors border ${darkMode ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-blue-400 border-transparent' : 'bg-white text-[#1F2933] hover:bg-[#EDEFF2] hover:text-[#2F5FD7] border-[#D8DCE3]'}`}>
                                         <Linkedin size={24} />
                                     </a>
-                                    <a href="https://github.com/yanowild" target="_blank" rel="noopener noreferrer" className={`p-4 rounded-full transition-colors border ${darkMode ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-blue-400 border-transparent' : 'bg-white text-[#1F2933] hover:bg-[#EDEFF2] hover:text-[#2F5FD7] border-[#D8DCE3]'}`}>
+                                    <a href="https://github.com/zoeperriard" target="_blank" rel="noopener noreferrer" className={`p-4 rounded-full transition-colors border ${darkMode ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-blue-400 border-transparent' : 'bg-white text-[#1F2933] hover:bg-[#EDEFF2] hover:text-[#2F5FD7] border-[#D8DCE3]'}`}>
                                         <Github size={24} />
                                     </a>
                                 </div>
@@ -1487,7 +1481,7 @@ const Portfolio = () => {
                     </div>
 
                     <div className={`mt-8 pt-6 border-t text-center text-sm pb-6 ${darkMode ? 'border-slate-800 text-slate-300' : 'border-[#D8DCE3] text-[#1F2933]'}`}>
-                        © {new Date().getFullYear()} Yannick Wild. {language === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'}
+                        © {new Date().getFullYear()} Zoé Perriard. {language === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'}
                     </div>
                 </div>
             </footer>
