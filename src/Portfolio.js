@@ -170,7 +170,7 @@ const uiText = {
             tagline: 'Information Systems Engineer',
             bio: 'Complex systems deserve simple design. I improve business processes by aligning operations with effective information systems.',
             downloadCV: 'CV',
-            cvLink: 'https://drive.google.com/file/d/1h_UvJLkhkZ5OHcpkZoMtuPEwLMzN6MBT/view?usp=sharing',
+            cvLink: 'https://drive.google.com/file/d/1WA989e5CMMenyba5MDZ7Jf7p0u-MatFk/view?usp=drive_link',
             contact: 'Contact',
             linkedin: 'https://www.linkedin.com/in/zoe-perriard/',
             github: 'https://github.com/zoeperriard',
@@ -393,17 +393,17 @@ const uiText = {
             items: [
                 {
                     school: "HEIG-VD, Yverdon",
-                    degree: "Bachelor of Science, Business Administration",
+                    degree: "Bachelor HES-SO in Business Administration",
                     period: "2022 - 2026"
                 },
                 {
                     school: "EPCL, Lausanne",
-                    degree: "Professional Baccalaureate (post-CFC)",
+                    degree: "Professional Baccalaureate in Post-CFC",
                     period: "2021 - 2022"
                 },
                 {
                     school: "EPCL, Lausanne",
-                    degree: "CFC Commercial Business",
+                    degree: "CFC in Commercial Business",
                     period: "2017 - 2021"
                 }
             ]
@@ -440,7 +440,7 @@ const uiText = {
             tagline: 'Ingénieur Systèmes d\'Information',
             bio: "Les systèmes complexes méritent un design simple. J’optimise les processus métier en alignant opérations et systèmes d’information.",
             downloadCV: 'CV',
-            cvLink: 'https://drive.google.com/file/d/1xjdaQb2RPjO0fWjo-KNL8p_Sb8oXoiIX/view?usp=sharing',
+            cvLink: 'https://drive.google.com/file/d/1YUMHkd4dW1K0PrGQPaHNzdQ4GvPNNTlN/view?usp=drive_link',
             contact: 'Contact',
             linkedin: 'https://www.linkedin.com/in/zoe-perriard/',
             github: 'https://github.com/zoeperriard',
@@ -665,17 +665,17 @@ const uiText = {
             items: [
                 {
                     school: "HEIG-VD, Yverdon",
-                    degree: "Bachelor HES-SO, économie d'entreprise",
+                    degree: "Bachelor HES-SO en Economie d'entreprise",
                     period: "2022 - 2026"
                 },
                 {
                     school: "EPCL, Lausanne",
-                    degree: "Maturité professionnelle post-CFC",
+                    degree: "Maturité professionnelle en Post-CFC",
                     period: "2021 - 2022"
                 },
                 {
                     school: "EPCL, Lausanne",
-                    degree: "CFC d’employée de commerce",
+                    degree: "CFC en Employée de commerce",
                     period: "2017 - 2021"
                 }
             ]
