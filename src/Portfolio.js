@@ -174,7 +174,7 @@ const uiText = {
             tagline: 'Business Analyst',
             bio: 'Data Analysis | Process Optimization | Information Systems',
             downloadCV: 'CV',
-            cvLink: 'https://drive.google.com/file/d/1WA989e5CMMenybiΩa5MDZ7Jf7p0u-MatFk/view?usp=drive_link',
+            cvLink: 'https://drive.google.com/file/d/1WA989e5CMMenyba5MDZ7Jf7p0u-MatFk/view?usp=sharing',
             contact: 'Contact',
             linkedin: 'https://www.linkedin.com/in/zoe-perriard/',
             github: 'https://github.com/zoeperriard',
@@ -190,20 +190,19 @@ const uiText = {
             },
             categories: {
                 all: 'All',
-                professional: 'Professional',
                 academic: 'Academic',
-                personal: 'Personal'
+                professional: 'Professional',
             },
             items: [
                 {
-                    title: "HEIG - Bachelor Project",
+                    title: "HEIG Bachelor Project",
                     role: "Entrepreneurial Project",
                     outcome: "Opportunity and economic feasibility study for an AI-powered travel planning application for independent senior travelers.",
-                    skillsUsed: ["Market Fit", "Strategy", "Economic"],
+                    skillsUsed: ["Market Fit", "Strategy", "Financial"],
                     projectLinks: [
                         { label: "Travelpop", url: "https://www.travelpop.app" }
                     ],
-                    category: "professional",
+                    category: "academic",
                     imageContain: true,
                     image: "/assets/travelpop1.webp",
                     images: [
@@ -214,7 +213,7 @@ const uiText = {
                 {
                     title: "Process Optimization",
                     role: "Consultant",
-                    outcome: "Applied project conducted at Swissquote Bank SA (Legal Operations). Analyzed internal processes and performance indicators, mapped operational workflows, and identified opportunities for process optimization and automation.",
+                    outcome: "Applied project conducted at Swissquote legal department. Analyzed internal processes and performance indicators, mapped operational workflows, and identified opportunities for process optimization and automation.",
                     skillsUsed: ["BPMN", "KPI", "Analysis"],
                     projectLinks: [
                         { label: "Company: Swissquote Bank", url: "https://www.swissquote.com/fr-ch/private" },
@@ -247,8 +246,8 @@ const uiText = {
                 {
                     title: "Market Analysis",
                     role: "Consultant",
-                    outcome: "Developed a business development strategy and market entry plan for an IoT air quality solutions company. Defined target segments, partnership channels, and an open API integration strategy.",
-                    skillsUsed: ["Interviews", "Teamwork", "Power BI"],
+                    outcome: "Market research project evaluating the attractiveness of Fussy deodorant among consumers aged 18-30 in the canton of Vaud. Conducted desk research, qualitative interviews, and quantitative surveys to analyze consumer behavior, usage habits, and key purchase drivers.",
+                    skillsUsed: ["Interviews", "Teamwork", "Statistical Analysis"],
                     projectLinks: [
                         { label: "Company: Fussy", url: "https://www.getfussy.com/de?country=CH" },
                     ],
@@ -402,7 +401,7 @@ const uiText = {
             tagline: 'Business Analyst',
             bio: "Analyse de données | Optimisation de processus | Systèmes d’information",
             downloadCV: 'CV',
-            cvLink: 'https://drive.google.com/file/d/1YUMHkd4dW1K0PrGQPaHNzdQ4GvPNNTlN/view?usp=drive_link',
+            cvLink: 'https://drive.google.com/file/d/1YUMHkd4dW1K0PrGQPaHNzdQ4GvPNNTlN/view?usp=sharing',
             contact: 'Contact',
             linkedin: 'https://www.linkedin.com/in/zoe-perriard/',
             github: 'https://github.com/zoeperriard',
@@ -418,50 +417,39 @@ const uiText = {
             },
             categories: {
                 all: 'Tous',
-                professional: 'Professionnel',
                 academic: 'Académique',
-                personal: 'Personnel'
+                professional: 'Professionnel',
             },
             items: [
                 {
-                    title: "Plateforme SAP FSM",
-                    role: "Product Owner",
-                    outcome: "Implémentation de SAP FSM afin d’optimiser les opérations de service à l’échelle globale (Europe, États-Unis, Chine, APAC). Standardisation des processus de service et configuration de tableaux de bord KPI pour le pilotage de la performance.",
-                    skillsUsed: ["BPMN", "Agile", "Analytique"],
+                    title: "HEIG Bachelor Project",
+                    role: "Projet entrepreneurial",
+                    outcome: "Étude d’opportunité et de faisabilité économique d’une application de planification de voyage automatisée par l’intelligence artificielle pour les voyageurs seniors autonomes.",
+                    skillsUsed: ["Analyse de marché", "Stratégie", "Viabilité financière"],
                     projectLinks: [
-                        { label: "Entreprise : GFMS", url: "https://www.gfms.com/com/en.html" },
-                        { label: "Plateforme : SAP FSM", url: "https://www.sap.com/swiss/products/scm/field-service-management.html" }
+                        { label: "Travelpop", url: "https://www.travelpop.app" },
                     ],
-                    category: "professional",
+                    category: "academic",
                     imageContain: true,
-                    image: "/assets/SAP FSM 1.webp",
+                    image: "/assets/travelpop1.webp",
                     images: [
-                        "/assets/SAP FSM 1.webp",
-                        "/assets/SAP FSM 2.webp",
-                        "/assets/SAP FSM 3.webp",
+                        "/assets/travelpop1.webp",
+                        "/assets/TAMSAMSOM 2.webp",
                     ]
                 },
                 {
-                    title: "Projets Hôteliers",
-                    role: "Chef de Projet",
-                    outcome: "Direction d’une équipe pour des projets de rénovation d’hôtels de luxe.\nEn charge du budget, achats, négociation des contrats avec les fournisseurs, coordination de la logistique et des installations sur site.",
-                    skillsUsed: ["Achats", "Budget", "Logistique"],
+                    title: "Optimisation processus",
+                    role: "Consultante",
+                    outcome: "Projet appliqué réalisé au sein du département Legal de Swissquote. Analyse des processus internes et des indicateurs de performance, cartographie des flux opérationnels et identification d’opportunités d’amélioration et d’automatisation des processus.",
+                    skillsUsed: ["BPMN", "KPI", "Analyse"],
                     projectLinks: [
-                        { label: "Entreprise : Sunnyland", url: "https://www.sunnylandconsulting.com" },
-                        {
-                            groupLabel: "Projets : ",
-                            links: [
-                                { label: "Six Senses", url: "https://www.sixsenses.com/en/hotels-resorts/europe/spain/ibiza" },
-                                { label: "Rosewood", url: "https://www.rosewoodhotels.com/en/villa-magna" }
-                            ]
-                        }
+                        { label: "Entreprise : Swissquote Bank", url: "https://www.swissquote.com/fr-ch/private"},
                     ],
                     category: "professional",
-                    image: "/assets/Hotel Procurement 1.webp",
+                    image: "/assets/Swissquote Bank 1.webp",
                     images: [
-                        "/assets/Hotel Procurement 1.webp",
-                        "/assets/Hotel Procurement 2.webp",
-                        "/assets/Hotel Procurement 3.webp",
+                        "/assets/Swissquote Bank 1.webp",
+                        "/assets/BPMN 2.webp",
                     ]
                 },
                 {
@@ -470,66 +458,32 @@ const uiText = {
                     outcome: "Développement et tests utilisateurs de deux interfaces d’IA : un chatbot et une interface graphique. L’étude a mis en évidence l’influence du design d’interaction sur la confiance et le sentiment de contrôle dans la planification de voyage assistée par IA.",
                     skillsUsed: ["Entretiens", "Expérience", "IA"],
                     projectLinks: [
-                        { label: "Université : HEC", url: "https://www.unil.ch/hec/en/home/menuinst/master/systemes-d-information.html" }
+                        { label: "Logiciel : HEC", url: "https://www.tableau.com/" }
                     ],
                     category: "academic",
-                    image: "/assets/Master Thesis 1.webp",
+                    image: "/assets/Fussy 1.webp",
                     images: [
-                        "/assets/Master Thesis 1.webp",
+                        "/assets/Fussy 1.webp",
                         "/assets/Master Thesis 2.webp",
                         "/assets/Master Thesis 3.webp",
                     ]
                 },
                 {
-                    title: "EHL - Projet Bachelor",
-                    role: "Consultant (Note : 6/6)",
-                    outcome: "Stratégie commerciale et plan d’entrée sur le marché pour une entreprise de solutions IoT en qualité de l’air. Définition des segments cibles, des partenaires stratégiques et du modèle d’intégration basé sur des API ouvertes.",
-                    skillsUsed: ["Stratégie", "Données", "IoT"],
+                    title: "Analyse de marché",
+                    role: "Consultante",
+                    outcome: "Projet d’étude de marché visant à évaluer l’attractivité du déodorant Fussy " +
+                        "auprès des consommateurs âgés de 18 à 30 ans dans le canton de Vaud. " +
+                        "Réalisation d’une recherche documentaire, d’entretiens qualitatifs " +
+                        "et d’enquêtes quantitatives afin d’analyser le comportement des consommateurs, leurs habitudes d’utilisation et les principaux facteurs influençant l’achat",
+                    skillsUsed: ["Qualitatif", "Quantitatif", "Statistiques"],
                     projectLinks: [
-                        { label: "Université : EHL", url: "https://www.ehl.edu" },
-                        { label: "Entreprise : Arve", url: "https://www.arveair.com" }
+                        { label: "Entreprise : Fussy", url: "https://www.getfussy.com/de?country=CH" }
                     ],
                     category: "academic",
-                    image: "/assets/Arve 1.webp",
+                    image: "/assets/Fussy 1.webp",
                     images: [
-                        "/assets/Arve 1.webp",
-                        "/assets/Arve 2.webp",
-                        "/assets/Arve 3.webp"
-                    ]
-                },
-                {
-                    title: "Projets Appliqués",
-                    role: "Consultant",
-                    outcome: "Projets développés en collaboration avec des professionnels lors de mon Master à HEC Lausanne. SAP : Conception d'un processus de vente piloté par l'IA. " +
-                        "Valtronic : Conception d’un cockpit de pilotage des KPI basé sur l’IA.",
-                    skillsUsed: ["Architecture", "Roadmap", "IA"],
-                    projectLinks: [
-                        { label: "Entreprise : SAP", url: "https://www.sap.com/index.html" },
-                        { label: "Entreprise : Valtronic", url: "https://valtronic.com/" }
-                    ],
-                    category: "academic",
-                    image: "/assets/Applied Projects 1.webp",
-                    images: [
-                        "/assets/Applied Projects 1.webp",
-                        "/assets/Applied Projects 2.webp",
-                    ]
-                },
-                {
-                    title: "Travelpop",
-                    role: "Développeur Full Stack",
-                    outcome: "Développement d'une application de voyage IA (web + mobile). Les utilisateurs peuvent :\n" +
-                        "Gérer les réservations, itinéraires, et budgets. " +
-                        "Inviter d'autres utilisateurs à collaborer sur un voyage. " +
-                        "Interagir avec l'IA et Google Maps dans l'application.",
-                    skillsUsed: ["Full-Stack", "UX/UI", "IA"],
-                    projectLinks: [
-                        { label: "Travelpop", url: "https://www.travelpop.app" },
-                    ],
-                    category: "personal",
-                    imageContain: true,
-                    image: "/assets/travelpop1.webp",
-                    images: [
-                        "/assets/travelpop1.webp",
+                        "/assets/Fussy 1.webp",
+                        "/assets/Analyse marche Fussy 2.webp",
                     ]
                 }
             ]
