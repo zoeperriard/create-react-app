@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brand-blue: #1e81b0;
+}
+
+.dark {
+  --brand-blue: #67bed9;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-y: scroll;

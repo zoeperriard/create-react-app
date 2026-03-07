@@ -167,10 +167,10 @@ const uiText = {
         // Hero
         hero: {
             name: 'Zoé Perriard',
-            tagline: 'Information Systems Engineer',
-            bio: 'Complex systems deserve simple design. I improve business processes by aligning operations with effective information systems.',
+            tagline: 'Business Analyst',
+            bio: 'Data Analysis | Process Optimization | Information Systems',
             downloadCV: 'CV',
-            cvLink: 'https://drive.google.com/file/d/1WA989e5CMMenyba5MDZ7Jf7p0u-MatFk/view?usp=drive_link',
+            cvLink: 'https://drive.google.com/file/d/1WA989e5CMMenybiΩa5MDZ7Jf7p0u-MatFk/view?usp=drive_link',
             contact: 'Contact',
             linkedin: 'https://www.linkedin.com/in/zoe-perriard/',
             github: 'https://github.com/zoeperriard',
@@ -192,9 +192,9 @@ const uiText = {
             },
             items: [
                 {
-                    title: "SAP FSM Platform",
-                    role: "Product Owner",
-                    outcome: "Implemented SAP FSM to optimize global service operations in Europe, USA, China, and APAC. Standardized service processes and configured KPI dashboards for performance management.",
+                    title: "HEIG - Bachelor Project",
+                    role: "Entrepreneurial Project",
+                    outcome: "Opportunity and economic feasibility study for an AI-powered travel planning application.",
                     skillsUsed: ["BPMN", "Agile", "Analytics"],
                     projectLinks: [
                         { label: "Company: GFMS", url: "https://www.gfms.com/com/en.html" },
@@ -437,8 +437,8 @@ const uiText = {
         // Hero
         hero: {
             name: 'Zoé Perraird',
-            tagline: 'Ingénieur Systèmes d\'Information',
-            bio: "Les systèmes complexes méritent un design simple. J’optimise les processus métier en alignant opérations et systèmes d’information.",
+            tagline: 'Business Analyst',
+            bio: "Analyse de données | Optimisation de processus | Systèmes d’information",
             downloadCV: 'CV',
             cvLink: 'https://drive.google.com/file/d/1YUMHkd4dW1K0PrGQPaHNzdQ4GvPNNTlN/view?usp=drive_link',
             contact: 'Contact',
@@ -732,7 +732,7 @@ const ProjectsSection = React.memo(({ t, darkMode, activeFilter, setActiveFilter
                             onClick={() => setActiveFilter(key)}
                             className={`px-6 py-2 rounded-full text-base font-medium transition-colors border ${
                                 activeFilter === key
-                                    ? darkMode ? 'bg-blue-400 text-slate-900 border-transparent' : 'bg-[#2F5FD7] text-white border-transparent'
+                                    ? darkMode ? 'bg-brand-blue text-slate-900 border-transparent' : 'bg-brand-blue text-white border-transparent'
                                     : darkMode ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 border-transparent' : 'bg-white text-[#1F2933] hover:bg-[#EDEFF2] border-[#D8DCE3]'
                             }`}
                         >
@@ -749,7 +749,7 @@ const ProjectsSection = React.memo(({ t, darkMode, activeFilter, setActiveFilter
                             <motion.div
                                 key={project.title}
                                 variants={fadeIn}
-                                className={`group rounded-2xl overflow-hidden transition-colors border ${darkMode ? 'bg-slate-900/50 border-slate-800 md:hover:border-slate-700' : 'bg-white border-[#D8DCE3] md:hover:border-[#2F5FD7]/40'}`}
+                                className={`group rounded-2xl overflow-hidden transition-colors border ${darkMode ? 'bg-slate-900/50 border-slate-800 md:hover:border-slate-700' : 'bg-white border-[#D8DCE3] md:hover:border-brand-blue/40'}`}
                             >
                                 <CardCarousel project={project} darkMode={darkMode} />
 
@@ -757,7 +757,7 @@ const ProjectsSection = React.memo(({ t, darkMode, activeFilter, setActiveFilter
                                     className={`p-8 border-t ${darkMode ? 'border-slate-800' : 'border-[#D8DCE3]'}`}
                                 >
                                     <div className="flex justify-between items-start mb-4">
-                                        <h3 className={`text-2xl font-bold transition-colors ${darkMode ? 'md:group-hover:text-blue-400' : 'md:group-hover:text-[#2F5FD7]'} ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>
+                                        <h3 className={`text-2xl font-bold transition-colors ${darkMode ? 'md:group-hover:text-brand-blue' : 'md:group-hover:text-brand-blue'} ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>
                                             {project.title}
                                         </h3>
                                     </div>
@@ -765,8 +765,8 @@ const ProjectsSection = React.memo(({ t, darkMode, activeFilter, setActiveFilter
                                     <div className="space-y-6">
 
                                         {project.role && (
-                                            <div className={`relative pl-4 border-l-2 transition-colors ${darkMode ? 'border-slate-700 md:group-hover:border-blue-400' : 'border-[#D8DCE3] md:group-hover:border-[#2F5FD7]'}`}>
-                                                <p className={`text-base font-semibold leading-relaxed transition-colors ${darkMode ? 'text-slate-300 md:group-hover:text-blue-400' : 'text-[#1F2933] md:group-hover:text-[#2F5FD7]'}`}>{project.role}</p>
+                                            <div className={`relative pl-4 border-l-2 transition-colors ${darkMode ? 'border-slate-700 md:group-hover:border-brand-blue' : 'border-[#D8DCE3] md:group-hover:border-brand-blue'}`}>
+                                                <p className={`text-base font-semibold leading-relaxed transition-colors ${darkMode ? 'text-slate-300 md:group-hover:text-brand-blue' : 'text-[#1F2933] md:group-hover:text-brand-blue'}`}>{project.role}</p>
                                             </div>
                                         )}
 
@@ -804,7 +804,7 @@ const ProjectsSection = React.memo(({ t, darkMode, activeFilter, setActiveFilter
                                                                             href={link.url}
                                                                             target="_blank"
                                                                             rel="noopener noreferrer"
-                                                                            className={`inline-flex items-center gap-1.5 text-sm transition-colors w-fit ${darkMode ? 'text-slate-300 hover:text-blue-400' : 'text-[#1F2933] hover:text-[#2F5FD7]'}`}
+                                                                            className={`inline-flex items-center gap-1.5 text-sm transition-colors w-fit ${darkMode ? 'text-slate-300 hover:text-brand-blue' : 'text-[#1F2933] hover:text-brand-blue'}`}
                                                                         >
                                                                             {link.label} <ExternalLink size={14} />
                                                                         </a>
@@ -822,7 +822,7 @@ const ProjectsSection = React.memo(({ t, darkMode, activeFilter, setActiveFilter
                                                             href={item.url}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
-                                                            className={`inline-flex items-center gap-2 text-sm transition-colors w-fit ${darkMode ? 'text-slate-300 hover:text-blue-400' : 'text-[#1F2933] hover:text-[#2F5FD7]'}`}
+                                                            className={`inline-flex items-center gap-2 text-sm transition-colors w-fit ${darkMode ? 'text-slate-300 hover:text-brand-blue' : 'text-[#1F2933] hover:text-brand-blue'}`}
                                                         >
                                                             {item.label} <ExternalLink size={14} />
                                                         </a>
@@ -949,31 +949,31 @@ const Portfolio = () => {
     }
 
     return (
-        <div className={`min-h-screen selection:bg-blue-400/30 ${darkMode ? 'bg-[#0b1220] text-slate-300' : 'bg-[#F4F5F7] text-[#1F2933]'}`}>
+        <div className={`min-h-screen selection:bg-brand-blue/30 ${darkMode ? 'bg-[#0b1220] text-slate-300' : 'bg-[#F4F5F7] text-[#1F2933]'}`}>
             <nav className={`fixed inset-x-0 top-0 z-50 border-b ${darkMode ? 'border-slate-800/80 bg-[#0b1220]/90' : 'border-[#D8DCE3] bg-[#F4F5F7]/95'}`}>
                 <div className="container mx-auto flex h-16 items-center justify-between gap-6 px-6">
                     <a href="#profil" className={`flex items-center gap-2 text-lg font-bold tracking-wide ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>
-                        <Layers className={darkMode ? 'text-blue-400' : 'text-[#2F5FD7]'} size={20} />
+                        <Layers className={darkMode ? 'text-brand-blue' : 'text-brand-blue'} size={20} />
                         Portfolio
                     </a>
 
                     <div className={`hidden items-center gap-8 text-base lg:flex ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>
-                        <a href="#projects" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-blue-400' : 'hover:text-[#2F5FD7]'}`}>
+                        <a href="#projects" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-brand-blue' : 'hover:text-brand-blue'}`}>
                             <Layout size={16} /> {t.nav.projects}
                         </a>
-                        <a href="#expertise" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-blue-400' : 'hover:text-[#2F5FD7]'}`}>
+                        <a href="#expertise" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-brand-blue' : 'hover:text-brand-blue'}`}>
                             <Settings size={16} /> {t.nav.expertise}
                         </a>
-                        <a href="#skills" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-blue-400' : 'hover:text-[#2F5FD7]'}`}>
+                        <a href="#skills" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-brand-blue' : 'hover:text-brand-blue'}`}>
                             <Zap size={16} /> {t.nav.skills}
                         </a>
-                        <a href="#experience" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-blue-400' : 'hover:text-[#2F5FD7]'}`}>
+                        <a href="#experience" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-brand-blue' : 'hover:text-brand-blue'}`}>
                             <Briefcase size={16} /> {t.nav.experience}
                         </a>
-                        <a href="#education" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-blue-400' : 'hover:text-[#2F5FD7]'}`}>
+                        <a href="#education" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-brand-blue' : 'hover:text-brand-blue'}`}>
                             <GraduationCap size={16} /> {t.nav.education}
                         </a>
-                        <a href="#contact" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-blue-400' : 'hover:text-[#2F5FD7]'}`}>
+                        <a href="#contact" className={`flex items-center gap-2 transition-colors ${darkMode ? 'hover:text-brand-blue' : 'hover:text-brand-blue'}`}>
                             <Mail size={16} /> {t.nav.contact}
                         </a>
                     </div>
@@ -988,7 +988,7 @@ const Portfolio = () => {
                         </button>
                         <button
                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                            className={`flex h-10 w-10 items-center justify-center rounded-full border transition-colors duration-300 ${darkMode ? 'border-slate-700 bg-slate-800/40 text-yellow-400 hover:bg-slate-700/60' : 'border-[#D8DCE3] bg-white text-[#1F2933] hover:text-[#2F5FD7]'}`}
+                            className={`flex h-10 w-10 items-center justify-center rounded-full border transition-colors duration-300 ${darkMode ? 'border-slate-700 bg-slate-800/40 text-yellow-400 hover:bg-slate-700/60' : 'border-[#D8DCE3] bg-white text-[#1F2933] hover:text-brand-blue'}`}
                             title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
                         >
                             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
@@ -996,7 +996,7 @@ const Portfolio = () => {
                         <div className="relative" ref={langMenuRef}>
                             <button
                                 onClick={() => setLangMenuOpen(!langMenuOpen)}
-                                className={`flex h-10 w-10 items-center justify-center rounded-full border text-sm font-bold transition-colors duration-300 cursor-pointer ${darkMode ? 'border-slate-700 bg-slate-800/40 text-blue-400 hover:bg-slate-700/60' : 'border-[#D8DCE3] bg-white text-[#1F2933] hover:text-[#2F5FD7]'}`}
+                                className={`flex h-10 w-10 items-center justify-center rounded-full border text-sm font-bold transition-colors duration-300 cursor-pointer ${darkMode ? 'border-slate-700 bg-slate-800/40 text-brand-blue hover:bg-slate-700/60' : 'border-[#D8DCE3] bg-white text-[#1F2933] hover:text-brand-blue'}`}
                                 title={language === 'en' ? 'Change language' : 'Changer de langue'}
                             >
                                 {language === 'en' ? 'EN' : 'FR'}
@@ -1012,13 +1012,13 @@ const Portfolio = () => {
                                     >
                                         <button
                                             onClick={() => { switchLanguage('en'); setLangMenuOpen(false); }}
-                                            className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors ${language === 'en' ? (darkMode ? 'text-blue-400 bg-slate-700/50' : 'text-[#2F5FD7] bg-[#EDEFF2]') : (darkMode ? 'text-slate-300 hover:bg-slate-700/50 hover:text-blue-400' : 'text-[#1F2933] hover:bg-[#EDEFF2] hover:text-[#2F5FD7]')}`}
+                                            className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors ${language === 'en' ? (darkMode ? 'text-brand-blue bg-slate-700/50' : 'text-brand-blue bg-[#EDEFF2]') : (darkMode ? 'text-slate-300 hover:bg-slate-700/50 hover:text-brand-blue' : 'text-[#1F2933] hover:bg-[#EDEFF2] hover:text-brand-blue')}`}
                                         >
                                             English
                                         </button>
                                         <button
                                             onClick={() => { switchLanguage('fr'); setLangMenuOpen(false); }}
-                                            className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors ${language === 'fr' ? (darkMode ? 'text-blue-400 bg-slate-700/50' : 'text-[#2F5FD7] bg-[#EDEFF2]') : (darkMode ? 'text-slate-300 hover:bg-slate-700/50 hover:text-blue-400' : 'text-[#1F2933] hover:bg-[#EDEFF2] hover:text-[#2F5FD7]')}`}
+                                            className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors ${language === 'fr' ? (darkMode ? 'text-brand-blue bg-slate-700/50' : 'text-brand-blue bg-[#EDEFF2]') : (darkMode ? 'text-slate-300 hover:bg-slate-700/50 hover:text-brand-blue' : 'text-[#1F2933] hover:bg-[#EDEFF2] hover:text-brand-blue')}`}
                                         >
                                             Français
                                         </button>
@@ -1052,7 +1052,7 @@ const Portfolio = () => {
                                         key={href}
                                         href={href}
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className={`flex items-center gap-3 px-3 py-3 rounded-lg transition-colors ${darkMode ? 'hover:bg-slate-800 hover:text-blue-400' : 'hover:bg-[#EDEFF2] hover:text-[#2F5FD7]'}`}
+                                        className={`flex items-center gap-3 px-3 py-3 rounded-lg transition-colors ${darkMode ? 'hover:bg-slate-800 hover:text-brand-blue' : 'hover:bg-[#EDEFF2] hover:text-brand-blue'}`}
                                     >
                                         <Icon size={16} /> {label}
                                     </a>
@@ -1065,8 +1065,8 @@ const Portfolio = () => {
             {/* Hero Section */}
             <header id="profil" className="relative min-h-screen scroll-mt-16 flex items-center justify-center overflow-hidden pt-20">
                 <div className="absolute inset-0 z-0">
-                    <div className={`absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[64px] ${darkMode ? 'bg-blue-600/10' : 'bg-[#2F5FD7]/10'}`} />
-                    <div className={`absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-[64px] ${darkMode ? 'bg-indigo-600/10' : 'bg-[#2F5FD7]/5'}`} />
+                    <div className={`absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[64px] ${darkMode ? 'bg-brand-blue/10' : 'bg-brand-blue/10'}`} />
+                    <div className={`absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-[64px] ${darkMode ? 'bg-brand-blue/10' : 'bg-brand-blue/5'}`} />
                 </div>
 
                 <motion.div
@@ -1085,7 +1085,7 @@ const Portfolio = () => {
 
                         <motion.p
                             variants={fadeIn}
-                            className={`text-lg md:text-2xl font-bold mb-6 ${darkMode ? 'text-blue-400' : 'text-[#2F5FD7]'}`}
+                            className={`text-lg md:text-2xl font-bold mb-6 ${darkMode ? 'text-brand-blue' : 'text-brand-blue'}`}
                         >
                             {t.hero.tagline}
                         </motion.p>
@@ -1094,11 +1094,7 @@ const Portfolio = () => {
                             variants={fadeIn}
                             className={`text-lg md:text-xl font-medium leading-relaxed mb-8 ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}
                         >
-                            {t.hero.bio.split('.').filter(Boolean).map((sentence, i, arr) => (
-                                <React.Fragment key={i}>
-                                    {sentence.trim()}.{i < arr.length - 1 && <br />}
-                                </React.Fragment>
-                            ))}
+                            {t.hero.bio}
                         </motion.p>
 
                         <motion.div
@@ -1106,31 +1102,64 @@ const Portfolio = () => {
                             className="flex flex-wrap gap-4 justify-center"
                         >
                             {t.hero.cvLink ? (
-                                <a href={t.hero.cvLink} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-colors text-sm md:text-base ${darkMode ? 'bg-blue-400 text-slate-900 hover:bg-blue-400/80' : 'bg-[#2F5FD7] text-white hover:bg-[#2854b5]'}`}>
+                                <motion.a
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    href={t.hero.cvLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all text-sm md:text-base shadow-sm hover:shadow-md ${darkMode ? 'bg-brand-blue text-slate-900 hover:bg-brand-blue/80' : 'bg-brand-blue text-white hover:bg-brand-blue/90'}`}
+                                >
                                     <Download size={20} /> {t.hero.downloadCV}
-                                </a>
+                                </motion.a>
                             ) : (
-                                <button className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-colors text-sm md:text-base ${darkMode ? 'bg-blue-400 text-slate-900 hover:bg-blue-400/80' : 'bg-[#2F5FD7] text-white hover:bg-[#2854b5]'}`}>
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all text-sm md:text-base shadow-sm hover:shadow-md ${darkMode ? 'bg-brand-blue text-slate-900 hover:bg-brand-blue/80' : 'bg-brand-blue text-white hover:bg-brand-blue/90'}`}
+                                >
                                     <Download size={20} /> {t.hero.downloadCV}
-                                </button>
+                                </motion.button>
                             )}
                             <div className="flex flex-wrap gap-3">
-                                <a href="#contact" className={`flex items-center gap-2 p-3 border rounded-lg transition-colors font-medium ${darkMode ? 'border-slate-700 bg-slate-800/30 hover:bg-slate-800/50 text-slate-300 hover:text-blue-400' : 'border-[#D8DCE3] bg-white hover:bg-[#EDEFF2] text-[#1F2933] hover:text-[#2F5FD7]'}`} title="Contact">
+                                <motion.a
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    href="#contact"
+                                    className={`flex items-center gap-2 p-3 border rounded-lg transition-all font-medium shadow-sm hover:shadow-md ${darkMode ? 'border-slate-700 bg-slate-800/30 hover:bg-slate-800/50 text-slate-300 hover:text-brand-blue' : 'border-[#D8DCE3] bg-white hover:bg-[#EDEFF2] text-[#1F2933] hover:text-brand-blue'}`}
+                                    title="Contact"
+                                >
                                     <Mail size={20} />
-                                </a>
-                                <a href={t.hero.linkedin} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 p-3 border rounded-lg transition-colors font-medium ${darkMode ? 'border-slate-700 bg-slate-800/30 hover:bg-slate-800/50 text-slate-300 hover:text-blue-400' : 'border-[#D8DCE3] bg-white hover:bg-[#EDEFF2] text-[#1F2933] hover:text-[#2F5FD7]'}`} title="LinkedIn">
+                                </motion.a>
+                                <motion.a
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    href={t.hero.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`flex items-center gap-2 p-3 border rounded-lg transition-all font-medium shadow-sm hover:shadow-md ${darkMode ? 'border-slate-700 bg-slate-800/30 hover:bg-slate-800/50 text-slate-300 hover:text-brand-blue' : 'border-[#D8DCE3] bg-white hover:bg-[#EDEFF2] text-[#1F2933] hover:text-brand-blue'}`}
+                                    title="LinkedIn"
+                                >
                                     <Linkedin size={20} />
-                                </a>
-                                <a href={t.hero.github} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 p-3 border rounded-lg transition-colors font-medium ${darkMode ? 'border-slate-700 bg-slate-800/30 hover:bg-slate-800/50 text-slate-300 hover:text-blue-400' : 'border-[#D8DCE3] bg-white hover:bg-[#EDEFF2] text-[#1F2933] hover:text-[#2F5FD7]'}`} title="GitHub">
+                                </motion.a>
+                                <motion.a
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    href={t.hero.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`flex items-center gap-2 p-3 border rounded-lg transition-all font-medium shadow-sm hover:shadow-md ${darkMode ? 'border-slate-700 bg-slate-800/30 hover:bg-slate-800/50 text-slate-300 hover:text-brand-blue' : 'border-[#D8DCE3] bg-white hover:bg-[#EDEFF2] text-[#1F2933] hover:text-brand-blue'}`}
+                                    title="GitHub"
+                                >
                                     <Github size={20} />
-                                </a>
+                                </motion.a>
                             </div>
                         </motion.div>
 
                         <motion.a
                             variants={fadeIn}
                             href="#projects"
-                            className={`inline-flex flex-col items-center gap-1 mt-8 transition-colors ${darkMode ? 'text-slate-300 hover:text-blue-400' : 'text-[#1F2933] hover:text-[#2F5FD7]'}`}
+                            className={`inline-flex flex-col items-center gap-1 mt-8 transition-colors ${darkMode ? 'text-slate-300 hover:text-brand-blue' : 'text-[#1F2933] hover:text-brand-blue'}`}
                         >
                             <span className="text-sm md:text-base font-bold">{t.hero.seeMore}</span>
                             <ChevronDown size={24} className="animate-bounce" />
@@ -1194,7 +1223,7 @@ const Portfolio = () => {
                                 >
                                     <div className="relative h-full flex flex-col items-center">
                                         <div className="mb-2 p-3 w-fit mx-auto transition-colors">
-                                            <Icon className={`${darkMode ? 'text-blue-400' : 'text-[#2F5FD7]'}`} size={28} />
+                                            <Icon className={`${darkMode ? 'text-brand-blue' : 'text-brand-blue'}`} size={28} />
                                         </div>
                                         <h3 className={`text-xl font-bold mb-2 text-center ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>
                                             {item.titleLine1 ? (<>{item.titleLine1}<br />{item.titleLine2}</>) : item.title}
@@ -1237,7 +1266,7 @@ const Portfolio = () => {
                                         <div className="space-y-3 w-fit mx-auto">
                                             {t.skills.engineeringSkills.map((skill, i) => (
                                                 <div key={i} className="flex items-center gap-3">
-                                                    <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-blue-400' : 'bg-[#2F5FD7]'}`} />
+                                                    <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-brand-blue' : 'bg-brand-blue'}`} />
                                                     <span className={`text-base font-medium ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{skill}</span>
                                                 </div>
                                             ))}
@@ -1252,7 +1281,7 @@ const Portfolio = () => {
                                         <div className="space-y-3 w-fit mx-auto">
                                             {t.skills.platformsSkills.map((skill, i) => (
                                                 <div key={i} className="flex items-center gap-3">
-                                                    <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-blue-400' : 'bg-[#2F5FD7]'}`} />
+                                                    <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-brand-blue' : 'bg-brand-blue'}`} />
                                                     <span className={`text-base font-medium ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{skill}</span>
                                                 </div>
                                             ))}
@@ -1269,7 +1298,7 @@ const Portfolio = () => {
                                         <div className="space-y-3 w-fit mx-auto">
                                             {t.skills.interpersonalSkills.map((skill, i) => (
                                                 <div key={i} className="flex items-center gap-3">
-                                                    <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-blue-400' : 'bg-[#2F5FD7]'}`} />
+                                                    <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-brand-blue' : 'bg-brand-blue'}`} />
                                                     <span className={`text-base font-medium ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{skill}</span>
                                                 </div>
                                             ))}
@@ -1331,11 +1360,11 @@ const Portfolio = () => {
                                     key={index}
                                     className="relative pl-8 pb-12 last:pb-0"
                                 >
-                                    <div className={`absolute -left-1.5 top-2.5 w-3 h-3 rounded-full z-10 ${darkMode ? 'bg-blue-400' : 'bg-[#2F5FD7]'}`} />
+                                    <div className={`absolute -left-1.5 top-2.5 w-3 h-3 rounded-full z-10 ${darkMode ? 'bg-brand-blue' : 'bg-brand-blue'}`} />
                                     <div className="mb-4">
                                         <div className="flex items-baseline justify-between gap-4">
                                             <h3 className={`text-2xl font-bold ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{exp.role}</h3>
-                                            <span className={`text-base whitespace-nowrap ${darkMode ? 'text-blue-400' : 'text-[#2F5FD7]'}`}>{exp.period}</span>
+                                            <span className={`text-base whitespace-nowrap ${darkMode ? 'text-brand-blue' : 'text-brand-blue'}`}>{exp.period}</span>
                                         </div>
                                         {Array.isArray(exp.company) ? exp.company.map((c, i) => (
                                             <p
@@ -1382,7 +1411,7 @@ const Portfolio = () => {
                                     key={index}
                                     className="relative pl-8 pb-12 last:pb-0"
                                 >
-                                    <div className={`absolute -left-1.5 top-2.5 w-3 h-3 rounded-full z-10 ${darkMode ? 'bg-blue-400' : 'bg-[#2F5FD7]'}`} />
+                                    <div className={`absolute -left-1.5 top-2.5 w-3 h-3 rounded-full z-10 ${darkMode ? 'bg-brand-blue' : 'bg-brand-blue'}`} />
                                     <div className="mb-0">
                                         <div className="flex items-baseline justify-between gap-4">
                                             {(() => {
@@ -1390,7 +1419,7 @@ const Portfolio = () => {
                                                 const diploma = parts[0];
                                                 return <h3 className={`text-2xl font-bold ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{diploma}</h3>;
                                             })()}
-                                            <span className={`text-base whitespace-nowrap ${darkMode ? 'text-blue-400' : 'text-[#2F5FD7]'}`}>{edu.period}</span>
+                                            <span className={`text-base whitespace-nowrap ${darkMode ? 'text-brand-blue' : 'text-brand-blue'}`}>{edu.period}</span>
                                         </div>
                                         {(() => {
                                             const parts = edu.degree.split(language === 'fr' ? / en /i : / in /i);
@@ -1434,19 +1463,19 @@ const Portfolio = () => {
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-1/2 space-y-10">
                             <div className="flex items-center gap-6">
-                                <div className={`p-4 rounded-full border ${darkMode ? 'bg-slate-800 text-blue-400 border-transparent' : 'bg-white text-[#2F5FD7] border-[#D8DCE3]'}`}>
+                                <div className={`p-4 rounded-full border ${darkMode ? 'bg-slate-800 text-brand-blue border-transparent' : 'bg-white text-brand-blue border-[#D8DCE3]'}`}>
                                     <Mail size={24} />
                                 </div>
                                 <p className={`text-base font-semibold ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.contact.email}</p>
                             </div>
                             <div className="flex items-center gap-6">
-                                <div className={`p-4 rounded-full border ${darkMode ? 'bg-slate-800 text-blue-400 border-transparent' : 'bg-white text-[#2F5FD7] border-[#D8DCE3]'}`}>
+                                <div className={`p-4 rounded-full border ${darkMode ? 'bg-slate-800 text-brand-blue border-transparent' : 'bg-white text-brand-blue border-[#D8DCE3]'}`}>
                                     <Phone size={24} />
                                 </div>
                                 <p className={`text-base font-semibold ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.contact.phone}</p>
                             </div>
                             <div className="flex items-center gap-6">
-                                <div className={`p-4 rounded-full border ${darkMode ? 'bg-slate-800 text-blue-400 border-transparent' : 'bg-white text-[#2F5FD7] border-[#D8DCE3]'}`}>
+                                <div className={`p-4 rounded-full border ${darkMode ? 'bg-slate-800 text-brand-blue border-transparent' : 'bg-white text-brand-blue border-[#D8DCE3]'}`}>
                                     <MapPin size={24} />
                                 </div>
                                 <p className={`text-base font-semibold ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.contact.location}</p>
@@ -1454,10 +1483,10 @@ const Portfolio = () => {
                             <div>
                                 <h4 className={`text-base font-semibold mb-4 ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.contact.socials || 'Socials'}</h4>
                                 <div className="flex gap-4">
-                                    <a href="https://www.linkedin.com/in/zoe-perriard/" target="_blank" rel="noopener noreferrer" className={`p-4 rounded-full transition-colors border ${darkMode ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-blue-400 border-transparent' : 'bg-white text-[#1F2933] hover:bg-[#EDEFF2] hover:text-[#2F5FD7] border-[#D8DCE3]'}`}>
+                                    <a href="https://www.linkedin.com/in/zoe-perriard/" target="_blank" rel="noopener noreferrer" className={`p-4 rounded-full transition-colors border ${darkMode ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-brand-blue border-transparent' : 'bg-white text-[#1F2933] hover:bg-[#EDEFF2] hover:text-brand-blue border-[#D8DCE3]'}`}>
                                         <Linkedin size={24} />
                                     </a>
-                                    <a href="https://github.com/zoeperriard" target="_blank" rel="noopener noreferrer" className={`p-4 rounded-full transition-colors border ${darkMode ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-blue-400 border-transparent' : 'bg-white text-[#1F2933] hover:bg-[#EDEFF2] hover:text-[#2F5FD7] border-[#D8DCE3]'}`}>
+                                    <a href="https://github.com/zoeperriard" target="_blank" rel="noopener noreferrer" className={`p-4 rounded-full transition-colors border ${darkMode ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-brand-blue border-transparent' : 'bg-white text-[#1F2933] hover:bg-[#EDEFF2] hover:text-brand-blue border-[#D8DCE3]'}`}>
                                         <Github size={24} />
                                     </a>
                                 </div>
