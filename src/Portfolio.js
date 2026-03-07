@@ -100,7 +100,7 @@ const CardCarousel = React.memo(({ project, darkMode }) => {
 
     return (
         <div
-            className="relative h-64 overflow-hidden group/carousel"
+            className="relative aspect-video overflow-hidden group/carousel"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
         >
@@ -114,9 +114,8 @@ const CardCarousel = React.memo(({ project, darkMode }) => {
                         src={img}
                         alt={`${project.title} - ${idx + 1}`}
                         loading="lazy"
-                        className={`w-full h-full ${project.imageContain ? 'object-cover object-left-top' : 'object-cover'} transition-[filter] duration-500 ${darkMode ? 'brightness-[0.8]' : 'brightness-[0.95]'} group-hover:brightness-100`}
+                        className={`w-full h-full ${project.imageContain ? 'object-contain' : 'object-cover'} transition-all duration-500`}
                     />
-                    <div className={`absolute inset-0 transition-colors group-hover:bg-transparent ${darkMode ? 'bg-slate-900/30' : 'bg-slate-900/5'}`} />
                 </div>
             ))}
 
@@ -194,35 +193,26 @@ const uiText = {
                 {
                     title: "HEIG - Bachelor Project",
                     role: "Entrepreneurial Project",
-                    outcome: "Opportunity and economic feasibility study for an AI-powered travel planning application.",
-                    skillsUsed: ["BPMN", "Agile", "Analytics"],
+                    outcome: "Opportunity and economic feasibility study for an AI-powered travel planning application for independent senior travelers.",
+                    skillsUsed: ["Market Fit", "Strategy", "Economic"],
                     projectLinks: [
-                        { label: "Company: GFMS", url: "https://www.gfms.com/com/en.html" },
-                        { label: "Platform: SAP FSM", url: "https://www.sap.com/swiss/products/scm/field-service-management.html" }
+                        { label: "Travelpop", url: "https://www.travelpop.app" }
                     ],
                     category: "professional",
                     imageContain: true,
-                    image: "/assets/SAP FSM 1.webp",
+                    image: "/assets/Logo travelpop 1.webp",
                     images: [
-                        "/assets/SAP FSM 1.webp",
-                        "/assets/SAP FSM 2.webp",
-                        "/assets/SAP FSM 3.webp",
+                        "/assets/Logo travelpop 1.webp",
+                        "/assets/TAM_SAM_SOM 2.webp",
                     ]
                 },
                 {
-                    title: "Hotel Procurement",
-                    role: "Project Manager",
-                    outcome: "Led a team to deliver end-to-end procurement for luxury hotel renovations. Managed budgets and purchasing, negotiated supplier contracts, and coordinated logistics and installations.",
-                    skillsUsed: ["Logistics", "Sourcing", "Team"],
+                    title: "Process Optimization",
+                    role: "Consultant",
+                    outcome: "Mapped operational workflows, analyzed performance indicators, and identified opportunities for efficiency improvements and automation.",
+                    skillsUsed: ["BPMN", "KPI", "Analysis"],
                     projectLinks: [
-                        { label: "Company: Sunnyland", url: "https://www.sunnylandconsulting.com" },
-                        {
-                            groupLabel: "Projects: ",
-                            links: [
-                                { label: "Six Senses", url: "https://www.sixsenses.com/en/hotels-resorts/europe/spain/ibiza" },
-                                { label: "Rosewood", url: "https://www.rosewoodhotels.com/en/villa-magna" }
-                            ]
-                        }
+                        { label: "Company: Swissquote Bank SA", url: "https://www.swissquote.com/fr-ch/private" },
                     ],
                     category: "professional",
                     image: "/assets/Hotel Procurement 1.webp",
