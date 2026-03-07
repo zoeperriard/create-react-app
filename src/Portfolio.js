@@ -453,19 +453,23 @@ const uiText = {
                     ]
                 },
                 {
-                    title: "HEC - Mémoire Master",
-                    role: "Chercheur (Note : 6/6)",
-                    outcome: "Développement et tests utilisateurs de deux interfaces d’IA : un chatbot et une interface graphique. L’étude a mis en évidence l’influence du design d’interaction sur la confiance et le sentiment de contrôle dans la planification de voyage assistée par IA.",
-                    skillsUsed: ["Entretiens", "Expérience", "IA"],
+                    title: "Analyse de données SIRH",
+                    role: "Analyste de données",
+                    outcome: "Analyse de données SIRH portant sur 1 470 collaborateurs. Réalisation de visualisations analytiques et d’un tableau de bord interactif sous Tableau afin d’identifier les facteurs associés aux départs des employés.",
+                    skillsUsed: ["Tableau", "Visualisation", "Storytelling"],
                     projectLinks: [
-                        { label: "Logiciel : HEC", url: "https://www.tableau.com/" }
+                        { label: "Outils : Tableau", url: "https://www.tableau.com/" }
                     ],
                     category: "academic",
-                    image: "/assets/Fussy 1.webp",
+                    imageContain: true,
+                    image: "/assets/Tableau logo 1.webp",
+                    imageScale: "scale-75",
                     images: [
-                        "/assets/Fussy 1.webp",
-                        "/assets/Master Thesis 2.webp",
-                        "/assets/Master Thesis 3.webp",
+                        { src: "/assets/Tableau logo 1.webp", scale: "scale-75" },
+                        { src: "/assets/Intro 2.webp", scale: "scale-100" },
+                        { src: "/assets/Matrice 3.webp", scale: "scale-100" },
+                        { src: "/assets/Analyse variables 4.webp", scale: "scale-100" },
+                        { src: "/assets/Analyse KPI 5.webp", scale: "scale-100" },
                     ]
                 },
                 {
