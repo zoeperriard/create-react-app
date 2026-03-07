@@ -212,7 +212,7 @@ const uiText = {
                     outcome: "Mapped operational workflows, analyzed performance indicators, and identified opportunities for efficiency improvements and automation.",
                     skillsUsed: ["BPMN", "KPI", "Analysis"],
                     projectLinks: [
-                        { label: "Company: Swissquote Bank SA", url: "https://www.swissquote.com/fr-ch/private" },
+                        { label: "Company: Swissquote Bank", url: "https://www.swissquote.com/fr-ch/private" },
                     ],
                     category: "professional",
                     imageContain: true,
@@ -241,10 +241,10 @@ const uiText = {
                     ]
                 },
                 {
-                    title: "EHL Bachelor Project",
-                    role: "Consultant (Grade 6/6).",
+                    title: "Market Analysis",
+                    role: "Consultant",
                     outcome: "Developed a business development strategy and market entry plan for an IoT air quality solutions company. Defined target segments, partnership channels, and an open API integration strategy.",
-                    skillsUsed: ["Strategy", "Data", "Power BI"],
+                    skillsUsed: ["Interviews", "Teamwork", "Power BI"],
                     projectLinks: [
                         { label: "Company: Fussy", url: "https://www.getfussy.com/de?country=CH" },
                     ],
@@ -252,7 +252,7 @@ const uiText = {
                     image: "/assets/Fussy 1.webp",
                     images: [
                         "/assets/Fussy 1.webp",
-                        "/assets/Analyse marche 2.webp",
+                        "/assets/Analyse marche Fussy 2.webp",
                     ]
                 }
             ]
@@ -700,7 +700,7 @@ const ProjectsSection = React.memo(({ t, darkMode, activeFilter, setActiveFilter
                 </motion.div>
 
                 {/* Project Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {t.projects.items
                         .filter(project => activeFilter === 'all' || project.category === activeFilter)
                         .map((project) => (
