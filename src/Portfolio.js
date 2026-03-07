@@ -114,7 +114,7 @@ const CardCarousel = React.memo(({ project, darkMode }) => {
                         src={img}
                         alt={`${project.title} - ${idx + 1}`}
                         loading="lazy"
-                        className={`w-full h-full ${project.imageContain ? 'object-contain' : 'object-cover'} transition-all duration-500`}
+                        className={`w-full h-full ${project.imageContain ? 'object-contain' : 'object-cover'} ${project.imageScale || ''} transition-all duration-500`}
                     />
                 </div>
             ))}
@@ -215,11 +215,13 @@ const uiText = {
                         { label: "Company: Swissquote Bank SA", url: "https://www.swissquote.com/fr-ch/private" },
                     ],
                     category: "professional",
-                    image: "/assets/Swissquote 1.webp",
+                    imageContain: true,
+                    imageScale: "scale-90",
+                    image: "/assets/Swissquote 2.webp",
                     images: [
-                        "/assets/Swissquote 1.webp",
+                        "/assets/Swissquote 2.webp",
                         "/assets/BPMN 2.webp",
-                        "/assets/Hotel Procurement 3.webp",
+                        
                     ]
                 },
                 {
@@ -242,49 +244,15 @@ const uiText = {
                     title: "EHL Bachelor Project",
                     role: "Consultant (Grade 6/6).",
                     outcome: "Developed a business development strategy and market entry plan for an IoT air quality solutions company. Defined target segments, partnership channels, and an open API integration strategy.",
-                    skillsUsed: ["Strategy", "Data", "IoT"],
+                    skillsUsed: ["Strategy", "Data", "Power BI"],
                     projectLinks: [
-                        { label: "University: EHL", url: "https://www.ehl.edu" },
-                        { label: "Company: Arve", url: "https://www.arveair.com" }
+                        { label: "Company: Fussy", url: "https://www.getfussy.com/de?country=CH" },
                     ],
                     category: "academic",
-                    image: "/assets/Arve 1.webp",
+                    image: "/assets/Fussy 1.webp",
                     images: [
-                        "/assets/Arve 1.webp",
-                        "/assets/Arve 2.webp",
-                        "/assets/Arve 3.webp"
-                    ]
-                },
-                {
-                    title: "Applied Projects",
-                    role: "Consultant",
-                    outcome: "Projects developed in collaboration with industry professionals during my Master's at HEC Lausanne. SAP: Designed an AI-driven sales process. Valtronic: Designed an AI-driven KPI cockpit.",
-                    skillsUsed: ["Architecture", "Roadmap", "AI"],
-                    projectLinks: [
-                        { label: "Company: SAP", url: "https://www.sap.com/index.html" },
-                        { label: "Company: Valtronic", url: "https://valtronic.com/" }
-                    ],
-                    category: "academic",
-                    image: "/assets/Applied Projects 1.webp",
-                    images: [
-                        "/assets/Applied Projects 1.webp",
-                        "/assets/Applied Projects 2.webp",
-                    ]
-                },
-                {
-                    title: "Travelpop",
-                    role: "Full Stack Developer",
-                    outcome: "Developing an AI travel app (web & mobile) where users can: manage reservations, itinerary, and budget. " +
-                        "Invite other users to collaborate on a trip. " +
-                        "Interact with AI and Google Maps directly in the app.",
-                    skillsUsed: ["Full-Stack", "UX/UI", "AI"],
-                    projectLinks: [
-                        { label: "Travelpop", url: "https://www.travelpop.app" },
-                    ],
-                    category: "personal",
-                    image: "/assets/travelpop1.webp",
-                    images: [
-                        "/assets/travelpop1.webp",
+                        "/assets/Fussy 1.webp",
+                        "/assets/Analyse marche 2.webp",
                     ]
                 }
             ]
