@@ -114,7 +114,7 @@ const CardCarousel = React.memo(({ project, darkMode }) => {
                         src={img}
                         alt={`${project.title} - ${idx + 1}`}
                         loading="lazy"
-                        className={`w-full h-full ${project.imageContain ? 'object-contain' : 'object-cover'} ${project.imagePosition || 'object-center'} transition-all duration-500`}
+                        className={`w-full h-full ${project.imageContain ? 'object-contain' : 'object-cover'} transition-all duration-500`}
                     />
                 </div>
             ))}
@@ -215,7 +215,6 @@ const uiText = {
                         { label: "Company: Swissquote Bank SA", url: "https://www.swissquote.com/fr-ch/private" },
                     ],
                     category: "professional",
-                    imagePosition: "object-bottom",
                     image: "/assets/Swissquote 1.webp",
                     images: [
                         "/assets/Swissquote 1.webp",
@@ -462,7 +461,7 @@ const uiText = {
                         { label: "Plateforme : SAP FSM", url: "https://www.sap.com/swiss/products/scm/field-service-management.html" }
                     ],
                     category: "professional",
-                    imagePosition: "object-bottom",
+                    imageContain: true,
                     image: "/assets/SAP FSM 1.webp",
                     images: [
                         "/assets/SAP FSM 1.webp",
