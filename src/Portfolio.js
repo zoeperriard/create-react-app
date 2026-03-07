@@ -104,20 +104,25 @@ const CardCarousel = React.memo(({ project, darkMode }) => {
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
         >
-            {images.map((img, idx) => (
-                <div
-                    key={idx}
-                    className="absolute inset-0 transition-opacity duration-300 ease-in-out"
-                    style={{ opacity: idx === currentImageIndex ? 1 : 0, pointerEvents: idx === currentImageIndex ? 'auto' : 'none' }}
-                >
-                    <img
-                        src={img}
-                        alt={`${project.title} - ${idx + 1}`}
-                        loading="lazy"
-                        className={`w-full h-full ${project.imageContain ? 'object-contain' : 'object-cover'} ${project.imageScale || ''} transition-all duration-500`}
-                    />
-                </div>
-            ))}
+            {images.map((img, idx) => {
+                const imgUrl = typeof img === 'string' ? img : img.src;
+                const imgScale = (typeof img === 'object' && img.scale) ? img.scale : (project.imageScale || '');
+
+                return (
+                    <div
+                        key={idx}
+                        className="absolute inset-0 transition-opacity duration-300 ease-in-out"
+                        style={{ opacity: idx === currentImageIndex ? 1 : 0, pointerEvents: idx === currentImageIndex ? 'auto' : 'none' }}
+                    >
+                        <img
+                            src={imgUrl}
+                            alt={`${project.title} - ${idx + 1}`}
+                            loading="lazy"
+                            className={`w-full h-full ${project.imageContain ? 'object-contain' : 'object-cover'} ${imgScale} transition-all duration-500`}
+                        />
+                    </div>
+                );
+            })}
 
             {images.length > 1 && (
                 <>
@@ -200,9 +205,9 @@ const uiText = {
                     ],
                     category: "professional",
                     imageContain: true,
-                    image: "/assets/Logo travelpop 1.webp",
+                    image: "/assets/travelpop1.webp",
                     images: [
-                        "/assets/Logo travelpop 1.webp",
+                        "/assets/travelpop1.webp",
                         "/assets/TAM_SAM_SOM 2.webp",
                     ]
                 },
@@ -216,11 +221,10 @@ const uiText = {
                     ],
                     category: "professional",
                     imageContain: true,
-                    imageScale: "scale-90",
-                    image: "/assets/Swissquote 2.webp",
+                    image: "/assets/Swissquote Bank 1.webp",
                     images: [
-                        "/assets/Swissquote 2.webp",
-                        "/assets/BPMN 2.webp",
+                        "/assets/Swissquote Bank 1.webp",
+                        { src: "/assets/BPMN 2.webp", scale: "scale-90" },
                         
                     ]
                 },
@@ -522,6 +526,7 @@ const uiText = {
                         { label: "Travelpop", url: "https://www.travelpop.app" },
                     ],
                     category: "personal",
+                    imageContain: true,
                     image: "/assets/travelpop1.webp",
                     images: [
                         "/assets/travelpop1.webp",
