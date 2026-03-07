@@ -208,13 +208,13 @@ const uiText = {
                     image: "/assets/travelpop1.webp",
                     images: [
                         "/assets/travelpop1.webp",
-                        "/assets/TAM_SAM_SOM 2.webp",
+                        "/assets/TAMSAMSOM 2.webp",
                     ]
                 },
                 {
                     title: "Process Optimization",
                     role: "Consultant",
-                    outcome: "Mapped operational workflows, analyzed performance indicators, and identified opportunities for efficiency improvements and automation.",
+                    outcome: "Applied project conducted at Swissquote Bank SA (Legal Operations). Analyzed internal processes and performance indicators, mapped operational workflows, and identified opportunities for process optimization and automation.",
                     skillsUsed: ["BPMN", "KPI", "Analysis"],
                     projectLinks: [
                         { label: "Company: Swissquote Bank", url: "https://www.swissquote.com/fr-ch/private" },
@@ -223,8 +223,8 @@ const uiText = {
                     imageContain: true,
                     image: "/assets/Swissquote Bank 1.webp",
                     images: [
-                        "/assets/Swissquote Bank 1.webp",
-                        { src: "/assets/BPMN 2.webp", scale: "scale-90" },
+                        { src: "/assets/Swissquote Bank 1.webp", scale: "scale-105" },
+                        { src: "/assets/BPMN 2.webp"},
                         
                     ]
                 },
