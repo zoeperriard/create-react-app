@@ -215,10 +215,10 @@ const uiText = {
                         { label: "Company: Swissquote Bank SA", url: "https://www.swissquote.com/fr-ch/private" },
                     ],
                     category: "professional",
-                    image: "/assets/Hotel Procurement 1.webp",
+                    image: "/assets/Swissquote 1.webp",
                     images: [
-                        "/assets/Hotel Procurement 1.webp",
-                        "/assets/Hotel Procurement 2.webp",
+                        "/assets/Swissquote 1.webp",
+                        "/assets/BPMN 2.webp",
                         "/assets/Hotel Procurement 3.webp",
                     ]
                 },
