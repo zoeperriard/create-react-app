@@ -23,7 +23,13 @@ import {
     Sun,
     Moon,
     Menu,
-    ChevronDown
+    ChevronDown,
+    BarChart3,
+    BarChart,
+    LineChart,
+    PieChart,
+    Smartphone,
+    TrendingUp
 } from 'lucide-react';
 
 const IconCloud = lazy(() => import("./components/ui/interactive-icon-cloud").then(m => ({ default: m.IconCloud })));
@@ -33,31 +39,22 @@ const ICON_CLOUD_SLUGS = [
     "claude",
     "copilot",
     "css3",
-    "docker",
-    "expo",
     "figma",
-    "firebase",
     "git",
     "github",
     "html5",
-    "hubspot",
     "intellijidea",
     "javascript",
-    "jira",
     "kaggle",
-    "lucid",
     "miro",
     "mysql",
-    "numpy",
     "odoo",
     "pandas",
-    "postman",
     "python",
-    "react",
     "render",
     "sap",
     "slack",
-    "springboot",
+    "googleanalytics",
     "tailwindcss"
 ];
 
@@ -228,25 +225,28 @@ const uiText = {
                     ]
                 },
                 {
-                    title: "HEC Master Thesis",
-                    role: "Researcher (Grade: 6/6)",
-                    outcome: "Developed and user-tested two AI interfaces, a Chatbot and a Graphical User Interface. The study generated insights into how interaction design influences user trust and sense of control in AI travel planning.",
-                    skillsUsed: ["Interviews", "Experiment", "AI"],
+                    title: "HRIS Data – Employee Attrition",
+                    role: "Data Analyst",
+                    outcome: "Analysis of an HRIS dataset covering 1,470 employees. Developed analytical visualizations and an interactive Tableau dashboard to identify key factors associated with employee attrition.",
+                    skillsUsed: ["Tableau", "Data Visualization", "HR Analytics"],
                     projectLinks: [
-                        { label: "University: HEC", url: "https://www.unil.ch/hec/en/home/menuinst/master/systemes-d-information.html" }
+                        { label: "Tools: Tableau", url: "https://www.tableau.com/" }
                     ],
                     category: "academic",
-                    image: "/assets/Master Thesis 1.webp",
+                    imageContain: true,
+                    image: "/assets/Tableau 1.webp",
                     images: [
-                        "/assets/Master Thesis 1.webp",
-                        "/assets/Master Thesis 2.webp",
-                        "/assets/Master Thesis 3.webp",
+                        "/assets/Tableau 1.webp",
+                        "/assets/Intro 2.webp",
+                        "/assets/Matrice 3.webp",
+                        "/assets/Analyse variables 4.webp",
+                        "/assets/Analyse KPI 5.webp",
                     ]
                 },
                 {
                     title: "Market Analysis",
                     role: "Consultant",
-                    outcome: "Market research project evaluating the attractiveness of Fussy deodorant among consumers aged 18-30 in the canton of Vaud. Conducted desk research, qualitative interviews, and quantitative surveys to analyze consumer behavior, usage habits, and key purchase drivers.",
+                    outcome: "Market research project assessing the attractiveness of Fussy deodorant among consumers aged 18–30 in Vaud, using desk research, interviews, and surveys to analyze consumer behavior and purchase drivers.",
                     skillsUsed: ["Interviews", "Teamwork", "Statistical Analysis"],
                     projectLinks: [
                         { label: "Company: Fussy", url: "https://www.getfussy.com/de?country=CH" },
@@ -265,55 +265,56 @@ const uiText = {
             title: 'My Expertise',
             items: [
                 {
+                    title: 'Data Analysis',
+                    titleLine1: 'Data',
+                    titleLine2: 'Analysis',
+                    icon: Database,
+                    desc: 'Data preparation, analysis, and exploration to identify actionable insights.'
+                },
+                {
+                    title: 'Business Intelligence',
+                    titleLine1: 'Business',
+                    titleLine2: 'Intelligence',
+                    icon: BarChart3,
+                    desc: 'Data visualization and dashboard development to support decision-making.'
+                },
+                {
                     title: 'Information Systems',
                     titleLine1: 'Information',
                     titleLine2: 'Systems',
-                    desc: 'Working across systems architecture, data structures and software development.'
+                    icon: Settings,
+                    desc: 'Modeling and optimization of information systems and business processes.'
                 },
                 {
-                    title: 'Process Optimization',
-                    titleLine1: 'Process',
-                    titleLine2: 'Optimization',
-                    desc: 'Improving efficiency by implementing structured and scalable business processes.'
-                },
-                {
-                    title: 'Artificial Intelligence',
-                    titleLine1: 'Artificial',
-                    titleLine2: 'Intelligence',
-                    desc: 'Leveraging AI tools for development, automation, and workflow acceleration.'
-                },
-                {
-                    title: 'Interaction Design',
-                    titleLine1: 'Interaction',
-                    titleLine2: 'Design',
-                    desc: 'Focusing on user experience to design intuitive, engaging, and enjoyable interfaces.'
+                    title: 'Strategic Analysis',
+                    titleLine1: 'Strategic',
+                    titleLine2: 'Analysis',
+                    icon: TrendingUp,
+                    desc: 'Analysis and optimization of organizational performance.'
                 }
             ]
         },
         // Skills
         skills: {
             title: 'Skills',
-            engineering: 'Engineering',
-            platforms: 'Platforms',
+            engineering: 'Data Analysis',
+            platforms: 'Tools',
             interpersonal: 'Interpersonal',
             languages: 'Languages',
             engineeringSkills: [
-                'Artificial Intelligence',
-                'Java · Python · SQL',
+                'SQL · Python · Excel',
+                'BPMN',
                 'HTML · CSS · JS',
-                'Spring · Auth · API',
             ],
             platformsSkills: [
-                'IntelliJ · GitHub',
-                'Jira · Postman',
+                'Tableau · Google Analytics',
                 'SAP · Odoo',
-                'ArchiMate · BPMN',
+                'IntelliJ · GitHub',
             ],
             interpersonalSkills: [
                 'Problem Solver',
                 'Organized',
                 'Resourceful',
-                'Team Player'
             ],
             languagesSkills: [
                 '🇫🇷 French: Native',
@@ -397,7 +398,7 @@ const uiText = {
         },
         // Hero
         hero: {
-            name: 'Zoé Perraird',
+            name: 'Zoé Perriard',
             tagline: 'Business Analyst',
             bio: "Analyse de données | Optimisation de processus | Systèmes d’information",
             downloadCV: 'CV',
@@ -422,7 +423,7 @@ const uiText = {
             },
             items: [
                 {
-                    title: "HEIG Bachelor Project",
+                    title: "HEIG Travail Bachelor",
                     role: "Projet entrepreneurial",
                     outcome: "Étude d’opportunité et de faisabilité économique d’une application de planification de voyage automatisée par l’intelligence artificielle pour les voyageurs seniors autonomes.",
                     skillsUsed: ["Analyse de marché", "Stratégie", "Viabilité financière"],
@@ -438,9 +439,9 @@ const uiText = {
                     ]
                 },
                 {
-                    title: "Optimisation processus",
+                    title: "Optimisation Processus",
                     role: "Consultante",
-                    outcome: "Projet appliqué réalisé au sein du département Legal de Swissquote. Analyse des processus internes et des indicateurs de performance, cartographie des flux opérationnels et identification d’opportunités d’amélioration et d’automatisation des processus.",
+                    outcome: "Projet appliqué au sein du département Legal de Swissquote portant sur l’analyse des processus, la cartographie des flux et l’identification d’opportunités d’optimisation et d’automatisation.",
                     skillsUsed: ["BPMN", "KPI", "Analyse"],
                     projectLinks: [
                         { label: "Entreprise : Swissquote Bank", url: "https://www.swissquote.com/fr-ch/private"},
@@ -453,19 +454,19 @@ const uiText = {
                     ]
                 },
                 {
-                    title: "Analyse de données SIRH",
+                    title: "SIRH Analyse",
                     role: "Analyste de données",
-                    outcome: "Analyse de données SIRH portant sur 1 470 collaborateurs. Réalisation de visualisations analytiques et d’un tableau de bord interactif sous Tableau afin d’identifier les facteurs associés aux départs des employés.",
-                    skillsUsed: ["Tableau", "Visualisation", "Storytelling"],
+                    outcome: "Étude d’un jeu de données SIRH portant sur 1'470 collaborateurs. Réalisation de visualisations analytiques et d’un tableau de bord interactif sous Tableau afin d’identifier les facteurs associés aux départs des employés.",
+                    skillsUsed: ["Tableau", "Visualisation", "Analyse RH"],
                     projectLinks: [
                         { label: "Outils : Tableau", url: "https://www.tableau.com/" }
                     ],
                     category: "academic",
                     imageContain: true,
-                    image: "/assets/Tableau logo 1.webp",
+                    image: "/assets/Tableau 1.webp",
                     imageScale: "scale-75",
                     images: [
-                        { src: "/assets/Tableau logo 1.webp", scale: "scale-75" },
+                        { src: "/assets/Tableau 1.webp", scale: "scale-100" },
                         { src: "/assets/Intro 2.webp", scale: "scale-100" },
                         { src: "/assets/Matrice 3.webp", scale: "scale-100" },
                         { src: "/assets/Analyse variables 4.webp", scale: "scale-100" },
@@ -473,12 +474,9 @@ const uiText = {
                     ]
                 },
                 {
-                    title: "Analyse de marché",
+                    title: "Analyse de Marché",
                     role: "Consultante",
-                    outcome: "Projet d’étude de marché visant à évaluer l’attractivité du déodorant Fussy " +
-                        "auprès des consommateurs âgés de 18 à 30 ans dans le canton de Vaud. " +
-                        "Réalisation d’une recherche documentaire, d’entretiens qualitatifs " +
-                        "et d’enquêtes quantitatives afin d’analyser le comportement des consommateurs, leurs habitudes d’utilisation et les principaux facteurs influençant l’achat",
+                    outcome: "Étude de marché sur l’attractivité du déodorant Fussy auprès des consommateurs de 18–30 ans dans le canton de Vaud, basée sur une recherche documentaire, des entretiens qualitatifs et des enquêtes quantitatives.",
                     skillsUsed: ["Qualitatif", "Quantitatif", "Statistiques"],
                     projectLinks: [
                         { label: "Entreprise : Fussy", url: "https://www.getfussy.com/de?country=CH" }
@@ -497,55 +495,56 @@ const uiText = {
             title: 'Mon Expertise',
             items: [
                 {
+                    title: 'Analyse de Données',
+                    titleLine1: 'Analyse de',
+                    titleLine2: 'Données',
+                    icon: Database,
+                    desc: 'Analyse, préparation et exploration de données pour identifier des insights.'
+                },
+                {
+                    title: 'Business Intelligence',
+                    titleLine1: 'Business',
+                    titleLine2: 'Intelligence',
+                    icon: BarChart3,
+                    desc: 'Visualisation et création de tableaux de bord pour la prise de décision.'
+                },
+                {
                     title: 'Systèmes d\'Information',
                     titleLine1: 'Systèmes',
                     titleLine2: 'd\'Information',
-                    desc: 'Architecture de systèmes, modélisation de données et développement de logiciels.'
+                    icon: Settings,
+                    desc: 'Modélisation et optimisation des systèmes et processus métier.'
                 },
                 {
-                    title: 'Optimisation des Processus',
-                    titleLine1: 'Optimisation',
-                    titleLine2: 'des Processus',
-                    desc: 'Optimisation des processus métier pour améliorer la productivité et la scalabilité.'
-                },
-                {
-                    title: 'Intelligence Artificielle',
-                    titleLine1: 'Intelligence',
-                    titleLine2: 'Artificielle',
-                    desc: 'Intégration d\'outils d\'IA pour le développement et l\'accélération des workflows.'
-                },
-                {
-                    title: 'Design d\'Interaction',
-                    titleLine1: 'Design',
-                    titleLine2: 'd\'Interaction',
-                    desc: 'Conception d\'interfaces intuitives centrées sur l\'expérience utilisateur.'
+                    title: 'Analyse Stratégique',
+                    titleLine1: 'Analyse',
+                    titleLine2: 'Stratégique',
+                    icon: TrendingUp,
+                    desc: 'Analyse et optimisation de la performance organisationnelle.'
                 }
             ]
         },
         // Skills
         skills: {
             title: 'Compétences',
-            engineering: 'Ingénierie',
-            platforms: 'Plateformes',
+            engineering: 'Analyse de données',
+            platforms: 'Outils',
             interpersonal: 'Interpersonnel',
             languages: 'Langues',
             engineeringSkills: [
-                'Intelligence Artificielle',
-                'Java · Python · SQL',
+                'SQL · Python · Excel',
+                'BPMN',
                 'HTML · CSS · JS',
-                'Spring · Auth · API',
             ],
             platformsSkills: [
-                'IntelliJ · GitHub',
-                'Jira · Postman',
+                'Tableau · Google Analytics',
                 'SAP · Odoo',
-                'ArchiMate · BPMN',
+                'IntelliJ · PyCharm · GitHub',
             ],
             interpersonalSkills: [
                 'Résolution de problèmes',
                 'Organisation',
                 'Autonomie',
-                'Esprit d\'équipe'
             ],
             languagesSkills: [
                 '🇫🇷 Français : Langue maternelle',
@@ -1112,8 +1111,7 @@ const Portfolio = () => {
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0"
                     >
                         {t.expertise.items.map((item, i) => {
-                            const icons = [Database, Settings, Bot, User];
-                            const Icon = icons[i];
+                            const Icon = item.icon || Database;
 
                             // Responsive column helpers (0-based index):
                             const isLast = i === t.expertise.items.length - 1;
