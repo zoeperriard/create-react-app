@@ -800,7 +800,7 @@ const Portfolio = () => {
 
     const [language, setLanguage] = useState(() => {
         const saved = localStorage.getItem('language');
-        return saved && uiText[saved] ? saved : 'en';
+        return saved && uiText[saved] ? saved : 'fr';
     });
     const t = uiText[language];
 
