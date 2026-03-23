@@ -55,7 +55,9 @@ const ICON_CLOUD_SLUGS = [
     "sap",
     "slack",
     "googleanalytics",
-    "tailwindcss"
+    "tailwindcss",
+    "postman",
+    "postgresql"
 ];
 
 const staggerContainer = {
@@ -168,8 +170,8 @@ const uiText = {
         // Hero
         hero: {
             name: 'Zoé Perriard',
-            tagline: 'Business Analyst',
-            bio: 'Data Analysis | Process Optimization | Information Systems',
+            tagline: 'Business & Data Analyst',
+            bio: 'Data Analysis & Visualization | SQL & Tableau | Process Optimization',
             downloadCV: 'CV',
             cvLink: 'https://drive.google.com/file/d/1WA989e5CMMenyba5MDZ7Jf7p0u-MatFk/view?usp=sharing',
             contact: 'Contact',
@@ -279,9 +281,9 @@ const uiText = {
                     desc: 'Data visualization and dashboard development to support decision-making.'
                 },
                 {
-                    title: 'Information Systems',
-                    titleLine1: 'Information',
-                    titleLine2: 'Systems',
+                    title: 'Process Optimization',
+                    titleLine1: 'Process',
+                    titleLine2: 'Optimization',
                     icon: Settings,
                     desc: 'Modeling and optimization of information systems and business processes.'
                 },
@@ -297,28 +299,34 @@ const uiText = {
         // Skills
         skills: {
             title: 'Skills',
-            engineering: 'Data Analysis',
-            platforms: 'Tools',
-            interpersonal: 'Interpersonal',
+            engineering: 'Data & Analyse',
+            platforms: 'Process & Business',
+            dataApis: 'Tools',
+            interpersonal: 'Professional Skills',
             languages: 'Languages',
             engineeringSkills: [
-                'SQL · Python · Excel',
-                'BPMN',
-                'HTML · CSS · JS',
+                'SQL / PostgreSQL',
+                'Python',
+                'Excel',
+                'Tableau',
+                'Google Analytics',
             ],
             platformsSkills: [
-                'Tableau · Google Analytics',
-                'SAP · Odoo',
-                'IntelliJ · GitHub',
+                'BPMN',
+                'SAP (FI/CO) · Odoo',
+            ],
+            dataApisSkills: [
+                'Postman (API REST)',
+                'GitHub',
             ],
             interpersonalSkills: [
-                'Problem Solver',
-                'Organized',
-                'Resourceful',
+                'Analytical thinking',
+                'Data-driven mindset',
+                'Attention to detail',
             ],
             languagesSkills: [
                 '🇫🇷 French: Native',
-                '🇬🇧 English: Fluent (B2)',
+                '🇬🇧 English: Advanced (B2)',
                 '🇩🇪 German: Intermediate (B2)',
             ]
         },
@@ -331,14 +339,14 @@ const uiText = {
                     location: "Gland",
                     role: "Legal Operations Officer",
                     period: "2023 - 2025",
-                    description: ["Maintenance of operational datasets and production of monthly statistical reports.", "Data preparation, cleaning, and exploratory analysis.","Process automation using Excel (VBA, Pivot Tables, Power Query).", "Coordination of operational information flows in a multilingual environment."]
+                    description: ["Maintenance of operational datasets and production of monthly statistical reports.", "Structured and analyzed data to identify trends and enhance operational tracking.","Process automation using Excel (VBA, Pivot Tables, Power Query).", "Coordination of operational information flows in a multilingual environment."]
                 },
                 {
                     company: "Public Prosecutor’s Office",
                     location: "Renens",
                     role: "Accounting Management Assistant",
                     period: "2021 - 2023",
-                    description: ["Processing of creditor payments and cash flow management.", "Contribution to budget monitoring and internal statistical reporting.","Management and transfer of seized assets in coordination with law enforcement."]
+                    description: ["Processed invoices and monitored financial flows using SAP, ensuring data accuracy.", "Supported budget tracking and produced internal reports and statistical analyses."]
                 },
                 {
                     company: "Municipality of Crissier",
@@ -399,8 +407,8 @@ const uiText = {
         // Hero
         hero: {
             name: 'Zoé Perriard',
-            tagline: 'Business Analyst',
-            bio: "Analyse de données | Optimisation de processus | Systèmes d’information",
+            tagline: 'Business & Data Analyst',
+            bio: "Analyse & visualisation de données | SQL & Tableau | Optimisation de processus",
             downloadCV: 'CV',
             cvLink: 'https://drive.google.com/file/d/1YUMHkd4dW1K0PrGQPaHNzdQ4GvPNNTlN/view?usp=sharing',
             contact: 'Contact',
@@ -509,9 +517,9 @@ const uiText = {
                     desc: 'Visualisation et création de tableaux de bord pour la prise de décision.'
                 },
                 {
-                    title: 'Systèmes d\'Information',
-                    titleLine1: 'Systèmes',
-                    titleLine2: 'd\'Information',
+                    title: 'Optimisation des Processus',
+                    titleLine1: 'Optimisation',
+                    titleLine2: 'des Processus',
                     icon: Settings,
                     desc: 'Modélisation et optimisation des systèmes et processus métier.'
                 },
@@ -528,27 +536,33 @@ const uiText = {
         skills: {
             title: 'Compétences',
             engineering: 'Analyse de données',
-            platforms: 'Outils',
-            interpersonal: 'Interpersonnel',
+            platforms: 'Processus & métiers',
+            dataApis: 'Outils',
+            interpersonal: 'Compétences clés',
             languages: 'Langues',
             engineeringSkills: [
-                'SQL · Python · Excel',
-                'BPMN',
-                'HTML · CSS · JS',
+                'SQL / PostgreSQL',
+                'Python',
+                'Excel',
+                'Tableau',
+                'Google Analytics',
             ],
             platformsSkills: [
-                'Tableau · Google Analytics',
-                'SAP · Odoo',
-                'IntelliJ · PyCharm · GitHub',
+                'BPMN',
+                'SAP (FI/CO) · Odoo',
+            ],
+            dataApisSkills: [
+                'Postman (API REST)',
+                'GitHub',
             ],
             interpersonalSkills: [
-                'Résolution de problèmes',
-                'Organisation',
-                'Autonomie',
+                'Esprit analytique',
+                'Orientation données',
+                'Sens du détail',
             ],
             languagesSkills: [
                 '🇫🇷 Français : Langue maternelle',
-                '🇬🇧 Anglais : Courant (B2)',
+                '🇬🇧 Anglais : Avancé (B2)',
                 '🇩🇪 Allemand : Intermédiaire (B2)'
             ]
         },
@@ -561,14 +575,14 @@ const uiText = {
                     location: "Gland",
                     role: "Legal Operations Officer",
                     period: "2023 - 2025",
-                    description: ["Mise à jour régulière des bases données et réalisation de statistiques mensuelles.", "Préparation, nettoyage et analyse exploratoire de données.", "Automatisation de processus via Excel (macros VBA, tableaux croisés dynamiques, Power Query).", "Gestion et traitement de la correspondance multilingue avec les autorités."]
+                    description: ["Mise à jour régulière des bases données et réalisation de statistiques mensuelles.", "Structuration et analyse de données pour identifier des tendances et améliorer le suivi opérationnel.", "Automatisation de processus via Excel (macros VBA, tableaux croisés dynamiques, Power Query).", "Gestion et traitement de la correspondance multilingue avec les autorités."]
                 },
                 {
                     company: "Ministère public cental",
                     location: "Renens",
                     role: "Assistante en gestion comptable",
                     period: "2022 - 2023",
-                    description: ["Etablir les paiements créanciers et gérer les liquidités.", "Collaborer à l’établissement du suivi budgétaire et des statistiques internes.", "Gestion et transferts de biens séquestrés en lien avec les forces de l’ordre."]
+                    description: ["Utilisation de SAP pour le traitement des factures, le suivi des flux financiers et le contrôle des données","Contribution au suivi budgétaire et à la production de reportings et statistiques internes."]
                 },
                 {
                     company: "Commune de Crissier",
@@ -1180,9 +1194,9 @@ const Portfolio = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {/* Engineering Card */}
                                 <div className="p-6">
-                                    <div className="flex flex-col items-center">
-                                        <h4 className={`text-lg font-bold mb-4 text-center w-full ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.skills.engineering}</h4>
-                                        <div className="space-y-3 w-fit mx-auto">
+                                    <div className="flex flex-col items-start">
+                                        <h4 className={`text-lg font-bold mb-4 text-left w-full ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.skills.engineering}</h4>
+                                        <div className="space-y-3 w-fit">
                                             {t.skills.engineeringSkills.map((skill, i) => (
                                                 <div key={i} className="flex items-center gap-3">
                                                     <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-brand-blue' : 'bg-brand-blue'}`} />
@@ -1195,15 +1209,28 @@ const Portfolio = () => {
 
                                 {/* Platforms Card */}
                                 <div className="p-6">
-                                    <div className="flex flex-col items-center">
-                                        <h4 className={`text-lg font-bold mb-4 text-center w-full ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.skills.platforms}</h4>
-                                        <div className="space-y-3 w-fit mx-auto">
-                                            {t.skills.platformsSkills.map((skill, i) => (
-                                                <div key={i} className="flex items-center gap-3">
-                                                    <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-brand-blue' : 'bg-brand-blue'}`} />
-                                                    <span className={`text-base font-medium ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{skill}</span>
-                                                </div>
-                                            ))}
+                                    <div className="flex flex-col items-start">
+                                        <div className="w-full">
+                                            <h4 className={`text-lg font-bold mb-4 text-left ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.skills.platforms}</h4>
+                                            <div className="space-y-3 w-fit mb-8">
+                                                {t.skills.platformsSkills.map((skill, i) => (
+                                                    <div key={i} className="flex items-center gap-3">
+                                                        <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-brand-blue' : 'bg-brand-blue'}`} />
+                                                        <span className={`text-base font-medium ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{skill}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <div className="w-full">
+                                            <h4 className={`text-lg font-bold mb-4 text-left ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.skills.dataApis}</h4>
+                                            <div className="space-y-3 w-fit">
+                                                {t.skills.dataApisSkills.map((skill, i) => (
+                                                    <div key={i} className="flex items-center gap-3">
+                                                        <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-brand-blue' : 'bg-brand-blue'}`} />
+                                                        <span className={`text-base font-medium ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{skill}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1212,9 +1239,9 @@ const Portfolio = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {/* Interpersonal Card */}
                                 <div className="p-6">
-                                    <div className="flex flex-col items-center">
-                                        <h4 className={`text-lg font-bold mb-4 text-center w-full ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.skills.interpersonal}</h4>
-                                        <div className="space-y-3 w-fit mx-auto">
+                                    <div className="flex flex-col items-start">
+                                        <h4 className={`text-lg font-bold mb-4 text-left w-full ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.skills.interpersonal}</h4>
+                                        <div className="space-y-3 w-fit">
                                             {t.skills.interpersonalSkills.map((skill, i) => (
                                                 <div key={i} className="flex items-center gap-3">
                                                     <div className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-brand-blue' : 'bg-brand-blue'}`} />
@@ -1227,9 +1254,9 @@ const Portfolio = () => {
 
                                 {/* Languages Card */}
                                 <div className="p-6">
-                                    <div className="flex flex-col items-center">
-                                        <h4 className={`text-lg font-bold mb-4 text-center w-full ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.skills.languages}</h4>
-                                        <div className="space-y-3 w-fit mx-auto">
+                                    <div className="flex flex-col items-start">
+                                        <h4 className={`text-lg font-bold mb-4 text-left w-full ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.skills.languages}</h4>
+                                        <div className="space-y-3 w-fit">
                                             {t.skills.languagesSkills.map((lang, i) => (
                                                 <div key={i} className="flex items-center gap-3"><span className={`text-base font-medium ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{lang}</span></div>
                                             ))}
