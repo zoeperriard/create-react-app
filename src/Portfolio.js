@@ -171,7 +171,7 @@ const uiText = {
         hero: {
             name: 'Zoé Perriard',
             tagline: 'Business & Data Analyst',
-            bio: 'Data Analysis & Visualization | SQL & Tableau | Process Optimization',
+            bio: 'Data Analysis and Visualization | SQL and Tableau | Process Optimization',
             downloadCV: 'CV',
             cvLink: 'https://drive.google.com/file/d/1WA989e5CMMenyba5MDZ7Jf7p0u-MatFk/view?usp=sharing',
             contact: 'Contact',
@@ -195,8 +195,8 @@ const uiText = {
             items: [
                 {
                     title: "HEIG Bachelor Project",
-                    role: "Entrepreneurial Project",
-                    outcome: "Opportunity and economic feasibility study for an AI-powered travel planning application for independent senior travelers.",
+                    role: "Travelpop - Entrepreneurial Project",
+                    outcome: "Designed and validated an automated travel planning application, including market analysis, economic modeling, and user research.",
                     skillsUsed: ["Market Fit", "Strategy", "Financial"],
                     projectLinks: [
                         { label: "Travelpop", url: "https://www.travelpop.app" }
@@ -408,7 +408,7 @@ const uiText = {
         hero: {
             name: 'Zoé Perriard',
             tagline: 'Business & Data Analyst',
-            bio: "Analyse & visualisation de données | SQL & Tableau | Optimisation de processus",
+            bio: "Analyse et visualisation de données | SQL et Tableau | Optimisation de processus",
             downloadCV: 'CV',
             cvLink: 'https://drive.google.com/file/d/1YUMHkd4dW1K0PrGQPaHNzdQ4GvPNNTlN/view?usp=sharing',
             contact: 'Contact',
@@ -432,8 +432,8 @@ const uiText = {
             items: [
                 {
                     title: "HEIG Travail Bachelor",
-                    role: "Projet entrepreneurial",
-                    outcome: "Étude d’opportunité et de faisabilité économique d’une application de planification de voyage automatisée par l’intelligence artificielle pour les voyageurs seniors autonomes.",
+                    role: "Travelpop - Projet entrepreneurial",
+                    outcome: "Conception et validation d’une application de planification de voyage automatisée, incluant analyse de marché, modélisation économique et recherche utilisateur.",
                     skillsUsed: ["Analyse de marché", "Stratégie", "Viabilité financière"],
                     projectLinks: [
                         { label: "Travelpop", url: "https://www.travelpop.app" },
@@ -1028,7 +1028,16 @@ const Portfolio = () => {
                             variants={fadeIn}
                             className={`text-lg md:text-xl font-medium leading-relaxed mb-8 ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}
                         >
-                            {t.hero.bio}
+                            {t.hero.bio.split('|').map((part, index) => (
+                                <React.Fragment key={index}>
+                                    <span className="block md:inline text-center md:text-left">
+                                        {part.trim()}
+                                    </span>
+                                    {index < t.hero.bio.split('|').length - 1 && (
+                                        <span className="hidden md:inline mx-2">|</span>
+                                    )}
+                                </React.Fragment>
+                            ))}
                         </motion.p>
 
                         <motion.div
