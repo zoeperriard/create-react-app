@@ -57,7 +57,8 @@ const ICON_CLOUD_SLUGS = [
     "googleanalytics",
     "tailwindcss",
     "postman",
-    "postgresql"
+    "postgresql",
+    "figma"
 ];
 
 const staggerContainer = {
@@ -578,7 +579,7 @@ const uiText = {
                     description: ["Mise à jour régulière des bases données et réalisation de statistiques mensuelles.", "Structuration et analyse de données pour identifier des tendances et améliorer le suivi opérationnel.", "Automatisation de processus via Excel (macros VBA, tableaux croisés dynamiques, Power Query).", "Gestion et traitement de la correspondance multilingue avec les autorités."]
                 },
                 {
-                    company: "Ministère public cental",
+                    company: "Ministère public central",
                     location: "Renens",
                     role: "Assistante en gestion comptable",
                     period: "2022 - 2023",
