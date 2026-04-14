@@ -1436,6 +1436,11 @@ const Portfolio = () => {
                                 </div>
                                 <p className={`text-base font-semibold ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.contact.location}</p>
                             </div>
+                            <div className="pt-4 flex justify-center lg:justify-start">
+                                <div className="badge-base LI-profile-badge" data-locale="fr_FR" data-size="medium" data-theme={darkMode ? "dark" : "light"} data-type="HORIZONTAL" data-vanity="zoe-perriard" data-version="v1">
+                                    <a className="badge-base__link LI-simple-link" href="https://ch.linkedin.com/in/zoe-perriard?trk=profile-badge">Zoé Perriard</a>
+                                </div>
+                            </div>
                             <div>
                                 <h4 className={`text-base font-semibold mb-4 ${darkMode ? 'text-slate-300' : 'text-[#1F2933]'}`}>{t.contact.socials || 'Socials'}</h4>
                                 <div className="flex gap-4">
